@@ -11,6 +11,8 @@ Jenisha Sivalingam (ID: 40247937)
 Oviya Sinnathamby (ID: 40249479)
 
 Veronique Touma (ID: 40249766)
+
+Midhurshaan Nadarajah (ID: 40245613)
 ## Project Approach and Technology: 
 Website developed using: HTML5, CSS3, JavaScript, Bootstrap5 
 
