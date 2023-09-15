@@ -4,6 +4,7 @@ The purpose of this web application is to make it easier for Homebuyers and prop
 The project is 10 to 12 weeks long, with 4 iterations in total. 
 ## Team Members and Roles:
 Christa Abou Arraje (ID:40226631)
+
 Jenisha Sivalingam (ID: 40247937)
 
 ## Project Approach and Technology: 
