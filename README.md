@@ -18,6 +18,7 @@ Veronique Touma (ID: 40249766)
 
 ## Project Approach and Technology: 
 Programing Languages: HTML5, CSS3, JavaScript, Bootstrap5 
+
 Softwares and Applications: VSCode, Instagram, ...
 
 
