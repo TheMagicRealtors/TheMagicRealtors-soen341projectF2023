@@ -8,13 +8,13 @@ Christa Abou Arraje (ID:40226631)
 
 Jenisha Sivalingam (ID: 40247937)
 
-Oviya Sinnathamby (ID: 40249479)
-
-Veronique Touma (ID: 40249766)
+Joze Semaan (ID: 40244141)
 
 Midhurshaan Nadarajah (ID: 40245631)
 
-Joze Semaan (ID: 40244141)
+Oviya Sinnathamby (ID: 40249479)
+
+Veronique Touma (ID: 40249766)
 
 ## Project Approach and Technology: 
 Website developed using: HTML5, CSS3, JavaScript, Bootstrap5 
