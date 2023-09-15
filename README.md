@@ -8,6 +8,7 @@ Christa Abou Arraje (ID:40226631)
 
 Jenisha Sivalingam (ID: 40247937)
 
+Oviya Sinnathamby (ID: 40249479)
 ## Project Approach and Technology: 
 Website developed using: HTML5, CSS3, JavaScript, Bootstrap5 
 
