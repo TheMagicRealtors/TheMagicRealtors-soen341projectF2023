@@ -6,4 +6,14 @@ The homebuyers can also choose the type of building they prefer (villa, apartmen
 An important feature in this app is the option for the homebuyers to favorite the properties they liked, so they can come back again to the favorites page and make their decision, instead of searching again for the houses among the thousands of options on the app.  
 They also have access to a built-in calculator that allows them to calculate mortgage and estimate the monthly payment for their future property.
 Another very important feature of this app is that the homebuyers can choose to receive help from a real-estate broker. They can also request a visit to a property and get an appointment through the application. 
+
+2-Property Renters: These kinds of users are looking for a place to rent instead of buying. 
+The web app will offer different tools to facilitate the users' journey during the search for their property.
+Since the clients will have specific conditions and requirements, the web app will enable them to filter or select the criteria that they are looking for instead of going through every property available. The options are as follow: Location or Area, Price Range, Number of Bedrooms, Dimension, Amenities,Type of Building, Year of Construction...
+In addition, users might be interested in several properties, therefore we will have a "favorites" section that will help them list the selected properties seperatly for easy access and easier comparison before a decision could be made.
+Moreover, clients will also have the opportunity to visit the property live on site, buy requesting and booking a date for the visit throughout the website. 
+Finally, when needing assistance, property renters will have the ability to search for brokers.
+
+
+
  
