@@ -1,7 +1,9 @@
-## **There are four types of users for this real-estate web application:**
-### Homebuyers: They're clients that are looking for a house to buy.  
+There are four types of users for this real-estate web application:            //should be bold and H2
+1-Homebuyers: They're clients that are looking for a house to buy.            //should be H3 (and remove the number)  
 The web app has a lot of interesting features that make it simpler and faster to find the ideal house. 
 For example, the homebuyers can filter through their options to choose the price range, the size (number of rooms and/or dimensions), the area/location, amenities (included or not),...
-The homebuyers can also choose the type of the building (villa, apartment, ...) and the year the building was built (if they want an old antique building or a modern industrial house for example).  
-One very important feature of this app is that the homebuyers can choose to receive help from a real-estate broker. They also have access to a built-in calculator in the app that allows them to calculate mortgage and estimate the monthly payment for their future property. 
-
+The homebuyers can also choose the type of building they prefer (villa, apartment, ...) and the year it was built (if they want an old antique building or a modern industrial house for example).  
+An important feature in this app is the option for the homebuyers to favorite the properties they liked, so they can come back again to the favorites page and make their decision, instead of searching again for the houses among the thousands of options on the app.  
+They also have access to a built-in calculator that allows them to calculate mortgage and estimate the monthly payment for their future property.
+Another very important feature of this app is that the homebuyers can choose to receive help from a real-estate broker. They can also request a visit to a property and get an appointment through the application. 
+ 
