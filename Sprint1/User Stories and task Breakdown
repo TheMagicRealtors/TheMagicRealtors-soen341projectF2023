@@ -1,5 +1,8 @@
-There are four types of users for this real-estate web application:            //should be bold and H2
-1-Homebuyers: They're clients that are looking for a house to buy.            //should be H3 (and remove the number)  
+There are four types of users for this real-estate web application:            
+1-Homebuyers
+As a homebuyer, I'm looking for a house to buy. 
+
+
 The web app has a lot of interesting features that make it simpler and faster to find the ideal house. 
 For example, the homebuyers can filter through their options to choose the price range, the size (number of rooms and/or dimensions), the area/location, amenities (included or not),...
 The homebuyers can also choose the type of building they prefer (villa, apartment, ...) and the year it was built (if they want an old antique building or a modern industrial house for example).  
