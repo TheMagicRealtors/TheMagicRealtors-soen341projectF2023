@@ -8,7 +8,7 @@ Christa Abou Arraje (ID:40226631)
 
 Jenisha Sivalingam (ID: 40247937)
 
-Joze Semaan (ID: 40244141)
+Jose Semaan (ID: 40244141)
 
 Midhurshaan Nadarajah (ID: 40245631)
 
