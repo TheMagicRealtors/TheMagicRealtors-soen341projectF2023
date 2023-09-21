@@ -1,15 +1,46 @@
 There are four types of users for this real-estate web application:            
-1-Homebuyers
-As a homebuyer, I'm looking for a house to buy. 
 
+Homebuyer
+User Story Description  
+As a homebuyer, I want to create an account so I can save my progress. 
+1. User presses “Log in” button on the top right corner
+2. User must enter username and password and click login button
+    a. If they do not have an account, they must create an account using the “create account” button at the top of the login page
+    b. Then they must fill out the form with their name, email address and password. 
+Acceptance Criteria
+- User must be able to create an account
+- User must be able to delete their account
+- User can edit their account details
 
-The web app has a lot of interesting features that make it simpler and faster to find the ideal house. 
+As a homebuyer, I want to search for properties for sale with specific criteria. 
+1. User clicks on the "filter" button on the top right 
+2. User will get different filtering options to select from based on their requirements: 
+    .Location: The user can choose the country, and/or the city of their choice  
+    .Price range: The user can specify the minimum and/or the maximum amount to pay for the property
+    .Amenities: The user can choose between a furnished and a non-furnished house
+    .Size: The user can decide on 
+3. User can then click on “Submit Offer”t
+4. User fills the offer form 
+   a. User enters the name of the broker
+   b. User enters client information
+   c. User enters offer
+5. User submits the form
+6. User gets a confirmation that the offer was submitted successfully
+7. The property gets added to the “My Account” tab on the navigation bar
+Acceptance Criteria
+- User must be able to submit offers
+- Must be able to view the status of the offer
+- Must validate the entered information (ex: price can’t be negative)
+- Must receive confirmation
+
+//The web app has a lot of interesting features that make it simpler and faster to find the ideal house. 
 For example, the homebuyers can filter through their options to choose the price range, the size (number of rooms and/or dimensions), the area/location, amenities (included or not),...
 The homebuyers can also choose the type of building they prefer (villa, apartment, ...) and the year it was built (if they want an old antique building or a modern industrial house for example).  
 An important feature in this app is the option for the homebuyers to favorite the properties they liked, so they can come back again to the favorites page and make their decision, instead of searching again for the houses among the thousands of options on the app.  
 They also have access to a built-in calculator that allows them to calculate mortgage and estimate the monthly payment for their future property.
 Another very important feature of this app is that the homebuyers can choose to receive help from a real-estate broker. They can also request a visit to a property and get an appointment through the application. 
 
+//
 2-Property Renters: These kinds of users are looking for a place to rent instead of buying. 
 The web app will offer different tools to facilitate the users' journey during the search for their property.
 Since the clients will have specific conditions and requirements, the web app will enable them to filter or select the criteria that they are looking for instead of going through every property available. The options are as follow: Location or Area, Price Range, Number of Bedrooms, Dimension, Amenities,Type of Building, Year of Construction...
