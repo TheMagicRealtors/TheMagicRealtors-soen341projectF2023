@@ -2,7 +2,7 @@ There are four types of users for this real-estate web application:
 Homebuyer
 User Story Description  
 1) As a homebuyer, I want to create an account so I can save my progress.
-- User presses “Log in” button on the top right corner
+- User presses “Login” button on the top right corner
 - User must enter username and password and click login button
     a. If they do not have an account, they must create an account using the “create account” button at the top of the login page
     b. Then they must fill out the form with their name, email address and password.
@@ -75,4 +75,57 @@ As a property rental, I might need some help with proper selection from a broker
 1.	The user clicks on “Choose a broker” and gets associated with an available broker within the same city.
 2.	The user will receive the broker’s contact information (the conversation between them should be made outside the web app).
 
+Broker 
+User Story Description
+As a broker, I want to create an account so that I can save my progress. 
+1.  User presses “Log in” button on the top right corner
+2.  User must enter username and password and click login button
+    a. If they do not have an account, they must create an account using the “create account” button at the top of the login page
+    b. Then they must fill out the form with their name, email address and password. 
+Acceptance Criteria
+- User must be able to create an account
+- User must be able to delete their account
+- User can edit their account details
+
+As a broker, I want to submit offers for buying properties on behalf  of my clients, and track the status of their offers.
+1.  User clicks on the desired property.
+2.  The property will open the house in a new page with the details of the house
+3.  User can then click on “Submit Offer”
+4.  User fills the offer form 
+    a. User enters the name of the broker
+    b. User enters client information
+    c. User enters offer
+5.  User submits the form
+6.  User gets a confirmation that the offer was submitted successfully
+7.  The property gets added to the “My Account” tab on the navigation bar
+Acceptance Criteria
+- User must be able to submit offers
+- Must be able to view the status of the offer
+- Must validate the entered information (ex: price can’t be negative)
+- Must receive confirmation
+
+As a broker, I want to request a visit to a property on behalf of my clients in order to show them properties that interest them
+1.  User clicks on the house he wants to book a visit for
+2.  User clicks on “book a visit” button 
+    a. select a time slot
+    b. Enter the name of the broker
+    c. Enter the name of the client
+3.  User clicks Submit 
+Acceptance Criteria
+- Appointment slots should update availabilities
+- User must be able to edit their appointment
+- User must be able to update client with booking information
+
+As a broker, I want to perform CRUD operations on property listing to update the listings
+1.  User clicks on the “Properties” tab on the navigation bar
+2.  User can browse all the properties he owns
+3.  The properties will be visible as a series of boxes that contain an image of the property, the price, and the city. 
+    a. User can click on a property to get more information
+    b. User can then click on the “edit” button to update the details of the listing or to delete a listing
+4.  User can create a new property by clicking the “Create” button
+    a. The user has to upload a picture of the house
+    b. User had to upload all the details asked. 
+Acceptance Criteria
+- Property listings should be updated on home page
+- If a listing is deleted the homebuyer must be notified 
 
