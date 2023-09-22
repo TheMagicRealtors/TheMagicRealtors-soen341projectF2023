@@ -22,7 +22,6 @@ Acceptance Criteria
 - Rooms: The user can specify the number of bedrooms and/or bathrooms. 
 
 
-
 3) As a homebuyer, I want to be able to save appealing properties in a separate list for easy access.  
 - The user presses the “heart” icon below the property’s image. This property will then be saved in the “favourites” list. 
 -The “favourites” list is accessible by clicking the “favourites” button next to the “account” button on the top right of the webpage
@@ -41,4 +40,40 @@ Acceptance Criteria
 - The user clicks on the “mortgage calculator” button 
 - A form will open, asking for the yearly interest rate, the loan amount, and the duration of the loan. 
 - After submitting the form, the user will get an estimate of the expected monthly payments. 
+
+
+Property Renters
+User Story Description
+As a property renter, I want to create an account so that I can save my progress.
+1. User presses “Log in” button on the top right corner
+2. User must enter username and password and click login button
+    a. If they do not have an account, they must create an account using the “create account” button at the top of the login page
+    b. Then they must fill out the form with their name, email address and password.
+Acceptance Criteria
+- User must be able to create an account
+- User must be able to delete their account
+- User can edit their account details.
+
+As a property rental, I want to search for properties to rent with my specific criteria.
+1.	User clicks on the filter button on the top right.
+2.	User will get different filtering options to select from based on their requirements:
+    •	Location: the user can choose the country and/or a city
+    •	Price range: the user can specify the minimum and/or the maximum amount to pay for the property.
+    •	Amenities: the user can choose between a furnished and a non-furnished house.
+    •	Size: the user can give a range of the desired area of the house in sqm2.
+    •	Rooms: the user can specify the number of bedrooms and/or bathrooms.
+
+As a property rental, I would like to be able to save appealing properties in a separate list for easy access.
+1.	The user presses the “heart” icon below the property’s image. This property will then be saved in the favorites list.
+2.	The favorites list is accessible by clicking the “favorites” button on the top right of the web page.
+
+As a property rental, I want to be able to visit a property of interest.
+1.	The user clicks on the “show more” button or on the image of the house.
+2.	A new page will load showing all details related to the property with an option to request a visit.
+3.	After selecting this feature, a small calendar of availabilities will open for the user to choose a date and time for the visit.
+
+As a property rental, I might need some help with proper selection from a broker to seal deal.
+1.	The user clicks on “Choose a broker” and gets associated with an available broker within the same city.
+2.	The user will receive the broker’s contact information (the conversation between them should be made outside the web app).
+
 
