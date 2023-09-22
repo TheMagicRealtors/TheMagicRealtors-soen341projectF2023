@@ -1,1 +1,44 @@
+There are four types of users for this real-estate web application:            
+
+Homebuyer
+User Story Description  
+1) As a homebuyer, I want to create an account so I can save my progress.
+- User presses “Log in” button on the top right corner
+- User must enter username and password and click login button
+    a. If they do not have an account, they must create an account using the “create account” button at the top of the login page
+    b. Then they must fill out the form with their name, email address and password.
+Acceptance Criteria
+- User must be able to create an account
+- User must be able to delete their account
+- User can edit their account details
+
+2) As a homebuyer, I want to search for properties for sale with specific criteria.
+- User clicks on the "filter" button on the top right
+- User will get different filtering options to select from based on their requirements:
+- Location: The user can choose the country, and/or the city of their choice  
+- Price range: The user can specify the minimum and/or the maximum amount to pay for the property
+- Amenities: The user can choose between a furnished and a non-furnished house
+- Size: The user can give a range of the desired area of the house in sqm2
+- Rooms: The user can specify the number of bedrooms and/or bathrooms. 
+
+
+
+3) As a homebuyer, I want to be able to save appealing properties in a separate list for easy access.  
+- The user presses the “heart” icon below the property’s image. This property will then be saved in the “favourites” list. 
+-The “favourites” list is accessible by clicking the “favourites” button next to the “account” button on the top right of the webpage
+
+
+4) As a homebuyer, I want to be able to visit a property of interest. 
+- The user clicks on the “show more” button or on the image of the house.
+- A new page will open, showing all details related to the property, with an option to request a visit. 
+- After selecting this feature, a small calendar of availabilities will open for the user to choose a date and time for the visit.  
+
+5) As a homebuyer, I might need some help with property selection from a broke, to seal the deal. 
+- The user clicks on “Choose a Broker”, and gets associated with an available broker within the same city. 
+- The user will receive the broker’s contact information (the conversation between them should be made outside the web app). 
+
+6) As a homebuyer, I want to know the expected monthly payments based on a loan and the interest rate. 
+- The user clicks on the “mortgage calculator” button 
+- A form will open, asking for the yearly interest rate, the loan amount, and the duration of the loan. 
+- After submitting the form, the user will get an estimate of the expected monthly payments. 
 
