@@ -129,3 +129,59 @@ Acceptance Criteria
 - Property listings should be updated on home page
 - If a listing is deleted the homebuyer must be notified 
 
+As a broker, I want to match properties to help clients find the property that best suits their needs
+1. Click on the filter option on the “Home” page
+    a. Select a price range
+    b. Select type of house
+    c. Select build year of house
+    d. Select number of rooms
+    e. Select rent or buy
+    f. Click “Apply”
+Acceptance criteria
+- Must filter the houses that don’t meet the criteria
+- Must display an appropriate message if no houses match the filter
+- Must display the houses that match the criteria
+
+As a broker, I want to offer management so that I can review and manage offers submitted by homebuyers for properties they represent. 
+1. User clicks on “Offers” on the navigation bar
+2. User can browse the submitted offers displayed as a picture box with the image of the house on the left and the name of the homebuyer and their sent offer on the right
+3. User clicks on the box of the house to view the details.
+4. Once on the details page, the user can click on one of three buttons
+    a. If the user clicks on the “Accept” button, the offer will be accepted and the homebuyer will be notified.
+    b. If the user clicks on the “Reject” button, the offer will be rejected and the homebuyer will be notified.
+    c. If the user clicks on the “Counter” button, the user will be able to send a counter-offer to the homebuyer.
+5. The user can click on an ‘X’ button to exit 
+Acceptance Criteria
+- Counter offers must be notified to the homebuyer
+- Accepted offers must be removed from the properties list
+- Rejected offers must be removed from the homebuyer’s request list. 
+
+As a broker I want to manage visits so that I can schedule appointments based on my client’s availability
+1. User clicks on the “Visits” tab on the navigation bar to manage the visits.
+2. User sees a calendar with all booked appointments
+3. User clicks on an appointment to view the details
+4. At the bottom of the details page there are two buttons, one called “Reschedule” and the other one is “Cancel”
+    a. When the “reschedule” button is clicked, the user can suggest a new time and the homebuyer will be notified
+    b. When the user clicks the “Cancel” button, the appointment is canceled.
+
+Acceptance Criteria
+- Must display all appointments
+- Must inform the buyer if visit is canceled
+- Must update the calendar once a visit is rescheduled
+
+System Administrator 
+User Story Description
+As a system Administrator, I want to create an account so that I can save my progress. 
+1. User presses “Log in” button on the top right corner
+2. User must enter username and password and click login button
+    a. If they do not have an account, they must create an account using the “create account” button at the top of the login page
+    b. Then they must fill out the form with their name, email address and password. 
+Acceptance Criteria
+- User must be able to create an account
+- User must be able to delete their account
+- User can edit their account details
+
+As a system administrator, I want to perform CRUD operations on brokers
+1. User clicks on the “System” tab on the navigation bar
+2. User can browse all the available brokers
+3. The brokers along with their details and properties will be visible as a series of boxes that contain the broker name. 
