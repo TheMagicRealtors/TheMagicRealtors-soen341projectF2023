@@ -187,3 +187,6 @@ As a system administrator, I want to perform CRUD operations on brokers
 3. The brokers along with their details and properties will be visible as a series of boxes that contain the broker name. 
 Acceptance Criteria
 -User must be able to access all existing user profiles
+-User must be able to modify a listing that contains mistakes
+-User must be able to delete a listing that is invalid 
+
