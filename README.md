@@ -17,7 +17,7 @@ Oviya Sinnathamby (ID: 40249479)
 Veronique Touma (ID: 40249766)
 
 ## Project Approach and Technology: 
-Programming Languages: HTML5, CSS3, JavaScript, Bootstrap5 
+Programming Languages: HTML5, CSS3, JavaScript, Bootstrap5, mySQL for database
 
 Softwares and Applications: VSCode (for writing the code), Instagram (for team communication), ...
 
