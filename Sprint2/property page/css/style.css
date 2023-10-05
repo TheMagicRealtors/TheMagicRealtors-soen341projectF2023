@@ -1,1 +1,16 @@
+body {
+    font-weight: 300px;
+    font-family: Arial, sans-serif;
+}
 
+img {
+    max-width:100%;
+    height: auto;
+    }
+
+a {
+    transition: 0.5s;
+}
+.col-lg-4 .col-md-6 .col-sm-12 {
+    margin: 20px;
+}
