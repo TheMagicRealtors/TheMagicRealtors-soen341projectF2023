@@ -33,6 +33,8 @@
                       </button>
                       <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item"><a class="nav-link" href="properties.php">Properties</a>
+                          </li>
                           <li class="nav-item"><a class="nav-link" href="#Broker">Connect with a Broker</a>
                           </li>
                           <li class="nav-item dropdown">
@@ -46,8 +48,6 @@
                               <li><a class="dropdown-item" href="#" style="text-align: center;">My Favorites</a></li>
                             </ul>
                           </li>
-                          <li class="nav-item"><a class="nav-link" href="#visit">Book a visit</a>
-                          </li>
                         </ul>
                 
                         <form method="post" action="search.php" class="d-flex">
@@ -58,6 +58,3 @@
                     </div>
                   </nav>
 </header>
-
-    </body>
-</html>
