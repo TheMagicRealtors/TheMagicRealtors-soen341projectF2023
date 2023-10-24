@@ -16,6 +16,7 @@ if($property['garage'] == 0){
 }
 
     echo '<div>'; 
+    echo '<img src="'.$property['image_url']. '" class="d-block w-100" alt="House Image">';
     echo '<h1 style="color: dodgerblue;">' . $property['price'] . '$</h1>';
     echo '<h2>'. $property['house_type'] . '</h2>';
     echo '<h4>' . $property['address'] .', ' . $property['district'] . '</h4><br>';
