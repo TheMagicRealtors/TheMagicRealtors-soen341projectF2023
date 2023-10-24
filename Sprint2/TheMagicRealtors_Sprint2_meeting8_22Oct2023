@@ -1,0 +1,35 @@
+Date and Time
+October 22 2023
+2:10pm to 5:25pm
+
+Venue
+Virtual meeting on Instagram
+
+Requested by
+Oviya Sinnathamby
+
+Meeting Attendees
+-Oviya Sinnathamby
+-Midhurshaan Nadarajah
+-Jenisha Sivalingam
+-Veronique Touma
+
+Business from Last Meeting
+-The HTML page for the properties was done
+
+Topic of the Meeting
+-Organizing what to do next
+-Setting up the MySQL database
+
+Tasks done during the meeting
+-We all learned how to create a database and database tables for MySQL using PHPMyAdmin through the local server XAMPP
+-Created a magicrealtors database, with users table and properties table
+-We separated tasks to be done during the next days before the deadlines
+
+Task Updates
+-Oviya and Midhurshaan will work on the log in/sign up and will do the Sprint 3 planning
+-Jenisha and Veronique will work on converting all the existing files into .php files, as well as the search feature and linking the database with the properties page
+
+Goals for Next Meeting
+-Updating Jose and Christa on what they have missed and assigning tasks for them
+-The team members should continue working on their own individual parts
