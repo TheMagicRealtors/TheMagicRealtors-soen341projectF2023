@@ -34,6 +34,9 @@ if($property['garage'] == 0){
     echo '<tr><td><b>Garage</b><br>' . $garage . '</td></tr>';
     echo '</table>';
     echo '</div>';
+    echo '<div style="background-color: rgb(255, 255, 255); padding: 30px;">';
+    echo '<button class="btn btn-outline-light" style="background-color: #000080;" onclick="saveVisitAddress(\'' . $property['address'] . '\')">Book a Visit</button>';
+    echo '</div>';
     echo '</div>';
 
     include 'footer.php';

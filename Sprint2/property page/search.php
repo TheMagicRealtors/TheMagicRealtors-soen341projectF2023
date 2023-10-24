@@ -8,9 +8,10 @@ $conn = pdo_connect_mysql();
 
 // Retrieve search criteria from the form
 $city = $_POST['city'];
+$city = strtolower($city);
 
 // Construct the SQL query based on the search criteria
-$sql = "SELECT * FROM properties WHERE city = :city";
+$sql = "SELECT * FROM properties WHERE LOWER(city) = :city";
 
 // Prepare the SQL query
 $stmt = $conn->prepare($sql);

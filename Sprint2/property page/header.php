@@ -16,9 +16,16 @@
 
             <script>
                 let selectedPropertyAddress;
+                let propertyVisit;
+
                 function savePropertyAddress(address) {
                     selectedPropertyAddress = address;
                     window.location.href = 'property.php?address=' + encodeURIComponent(address); //saves address and redorects to property.php
+                }
+
+                function saveVisitAddress(address){
+                  propertyVisit = address;
+                  window.location.href = 'book_visit.php?address=' + encodeURIComponent(address);
                 }
             </script>
         </head>
