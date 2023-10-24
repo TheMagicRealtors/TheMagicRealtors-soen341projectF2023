@@ -43,5 +43,6 @@ if ($stmt->rowCount() > 0) {
 }
 ?>
 </div>
-</body>
-</html>
+<?php
+include 'footer.php';
+?>
