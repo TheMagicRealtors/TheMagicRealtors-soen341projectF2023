@@ -35,4 +35,5 @@ if($property['garage'] == 0){
     echo '</div>';
     echo '</div>';
 
+    include 'footer.php';
 ?>
