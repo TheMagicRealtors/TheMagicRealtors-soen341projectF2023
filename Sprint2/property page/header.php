@@ -58,7 +58,7 @@
                         </ul>
                 
                         <form method="post" action="search.php" class="d-flex">
-                          <input class="form-control me-2" type="search" placeholder="Search for Properties" aria-label="Search" type="text" name="city" id="city">
+                          <input class="form-control me-2" type="search" placeholder="Search for Properties by City" aria-label="Search" type="text" name="city" id="city">
                           <button class="btn btn-outline-light" type="submit" value = "Search" style="background-color:#000080; ">Search</button>
                         </form>
                       </div>
