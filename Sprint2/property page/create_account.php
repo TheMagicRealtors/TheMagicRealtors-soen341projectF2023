@@ -1,32 +1,72 @@
+<?php
 
+    include 'create_account_functions.php';
+    require 'header.php';
+?>
 
 <!DOCTYPE html>
 <html>
     <style>
-        .createAccountForm {
-            position: center;
-            margin: auto;
-            max-width: 600px;
+
+        html, body {
+            height:100%;
+            margin:0;
+            padding:0;
+        }
+        .image_background {
+            background: yellow;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-image: url("property_images/property_6.jpg");
+            opacity: 1;
+
+            min-height: 380px;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        .CAForm {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* margin: auto; */
+            width: 600px;
             padding: 16px;
-            left:50%;
-            right:50%;
-            transform: translate(-50%,-505);
             background-color: white;
-            color:#000080;
-            text-align:center;
+            color: black;
+        }
+        input[type=text] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+        input[type=text]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+        .loginButton {
+            background-color: #000080;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
         }
 
-        input[type=text]{
-            width:100%;
-            padding:15px;
-            margin:5px 0 22px 0;
-            border:none;
-            background:#f1f1f1;
+        .loginButton:hover {
+            opacity: 1;
         }
-
-        input[type=text]:focus{
-            backgroud-colour:#ddd;
-            outline:none;
+        
+        h1 {
+            text-align: center;
         }
 
         input[type="radio"]{
@@ -34,47 +74,15 @@
         }
   
     </style>
-    <head>
-    <link rel="stylesheet" type="text/css" href="myboringfilename.css">
-    </head>
-<?php
-    include 'property_functions.php';
-    // include 'create_account_function.php';
-    require 'header.php';
-?>
-<?php
-    if (isset($_POST['submit'])) {
-        $email = $_POST['email'];
-        $passwords= $_POST['passwords'];
-        $full_name = $_POST['full_name'];
-        $user_type = $_POST['user_type'];
-    
-        $conn = pdo_connect_mysql();
-        $pdoQuery= "INSERT INTO `users`(`id`, `email`, `passwords`, `full_name`, `user_type`) VALUES (NULL,:email, :passwords,:full_name,:user_type)";
-  
-        $pdoResult = $conn->prepare($pdoQuery);
-        $pdoExec = $pdoResult->execute(array(":email"=>$email,":passwords"=>$passwords,":full_name"=>$full_name,":user_type"=>$user_type));
-       
-        if($pdoExec){
-            
-            header("Location: properties.php");
-            exit();
-            
-        }else{
-            echo 'Failed';
-        }
 
 
-    }
-
-?>
 <body>
     <div class="background-image">
         <h1 style="font-size: 72px;">AVAILABLE PROPERTIES</h1>
     </div >
-    <div style="font: 95% Arial, Helvetica, sans-serif; padding: 16px;background: #F7F7F7;">
-        <form method= POST class="createAccountForm">
-            <h1 style=text-align:center>Create Account</h1>
+    <div class= image_background >
+        <form method= POST class="CAForm">
+            <h1 style=text-align:center><b>Create Account</b></h1>
             <label for="email"><b>Email</b></label><br>
             <input type="text" placeholder="Enter Email" name="email" required><br>
 
@@ -90,7 +98,7 @@
              <input type="radio" name="user_type" value=2>Broker
              <input type="radio" name="user_type" value=2>System Administrator
             <br><br>
-            <button type="submit" class="btn" name=submit style="background-color: #000080;color:white" >Create Account!</button><br>
+            <button type="submit" class="loginButton" name=submit style="background-color: #000080;color:white" >Create Account!</button><br>
             
 
         </form>
