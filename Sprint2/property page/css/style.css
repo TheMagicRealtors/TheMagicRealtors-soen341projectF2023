@@ -18,3 +18,22 @@ a {
 .loginForm {
     color:aqua;
 }
+
+.card-text {
+    text-align: left;
+}
+
+.headtitle {
+    background-color: #000080;
+}
+
+.headtitle h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.card-body img {
+  max-width: 20px;
+  height: 20px;
+  margin: 0 auto 15px;
+}
