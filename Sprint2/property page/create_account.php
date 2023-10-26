@@ -1,13 +1,13 @@
 <?php
-    session_start();
-    include 'login_functions.php';
+
+    include 'create_account_functions.php';
     require 'header.php';
 ?>
-
 
 <!DOCTYPE html>
 <html>
     <style>
+
         html, body {
             height:100%;
             margin:0;
@@ -29,13 +29,13 @@
             background-size: cover;
             position: relative;
         }
-        .loginForm {
+        .CAForm {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             /* margin: auto; */
-            width: 400px;
+            width: 600px;
             padding: 16px;
             background-color: white;
             color: black;
@@ -68,38 +68,49 @@
         h1 {
             text-align: center;
         }
-        
+
+        input[type="radio"]{
+            margin: 0 10px 0 10px;
+        }
+  
     </style>
-    <head>
-    <link rel="stylesheet" type="text/css" href="myboringfilename.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
+
 
 <body>
     <div class="background-image">
         <h1 style="font-size: 72px;">AVAILABLE PROPERTIES</h1>
-    </div>
-    <div class="image_background">
-        <form class="loginForm" method=POST>
-            <h1><b>Login</b></h1>
+    </div >
+    <div class= image_background >
+        <form method= POST class="CAForm">
+            <h1 style=text-align:center><b>Create Account</b></h1>
             <label for="email"><b>Email</b></label><br>
             <input type="text" placeholder="Enter Email" name="email" required><br>
 
-            <label for="password"><b>Password</b></label><br>
-            <input type="text" placeholder="Enter Password" name="password" required><br>
+            <label for="passwords"><b>Password</b></label><br>
+            <input type="text" placeholder="Enter Password" name="passwords" required><br>
 
-            <button type="submit" class="loginButton">Login</button><br><br>
+            <label for="full_name"><b>Full Name</b></label><br>
+            <input type="text" placeholder="Full Name" name="full_name" required><br>
 
-            Don't have an account? Click below to create one<br><br>
-             <button type="submit" value="login" class="loginButton">Create Account</button>
+            <label for=""><b>What type of user are you?</b></label><br><br>
+             <input type="radio" name="user_type" value=1>Homebuyer 
+             <input type="radio" name="user_type" value=2>Property Renter
+             <input type="radio" name="user_type" value=2>Broker
+             <input type="radio" name="user_type" value=2>System Administrator
+            <br><br>
+            <button type="submit" class="loginButton" name=submit style="background-color: #000080;color:white" >Create Account!</button><br>
+            
+
         </form>
+     
     </div>
 
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
-    <?php
-        require 'footer.php'
-    ?>
 </body>
+
 </html>
+<?php
+ require 'footer.php';
+ ?>

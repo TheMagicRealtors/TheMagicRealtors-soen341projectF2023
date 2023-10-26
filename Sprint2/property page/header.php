@@ -50,7 +50,7 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                               <li><a class="dropdown-item" href="login.php" style="text-align: center;">Log In</a></li>
                               <li><hr class="dropdown-divider"></li>
-                              <li><a class="dropdown-item" href="#" style="text-align: center;">Sign Up</a></li>
+                              <li><a class="dropdown-item" href="create_account.php" style="text-align: center;">Sign Up</a></li>
                               <li><hr class="dropdown-divider"></li>
                               <li><a class="dropdown-item" href="#" style="text-align: center;">My Favorites</a></li>
                             </ul>
