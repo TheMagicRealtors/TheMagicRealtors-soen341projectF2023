@@ -25,7 +25,7 @@ $pdo = pdo_connect_mysql();
         $pdoExec = $pdoResult->execute(array(":email"=>$email,":passwords"=>$passwords,":full_name"=>$full_name,":user_type"=>$user_type));
        
         if($pdoExec){
-            
+           echo 'You created your account successfully. Log in to continue.';
             header("Location: login.php");
             exit();
             

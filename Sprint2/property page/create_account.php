@@ -18,7 +18,7 @@
             height: 100%;
             width: 100%;
             background-size: cover;
-            background-image: url("property_images/property_6.jpg");
+            background-image: url("property_images/property_9.jpg");
             opacity: 1;
 
             min-height: 380px;
