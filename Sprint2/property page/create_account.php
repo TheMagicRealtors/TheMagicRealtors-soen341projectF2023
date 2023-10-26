@@ -34,7 +34,7 @@
         if($pdoExec){
             
             header("Location: properties.php");
-            exit;
+            exit();
             
         }else{
             echo 'Failed';
