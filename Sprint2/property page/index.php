@@ -1,3 +1,3 @@
 <?php
-include 'properties.php';
+include 'create_account.php';
     ?>
