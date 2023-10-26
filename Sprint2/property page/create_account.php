@@ -30,9 +30,12 @@
   
         $pdoResult = $conn->prepare($pdoQuery);
         $pdoExec = $pdoResult->execute(array(":email"=>$email,":passwords"=>$passwords,":full_name"=>$full_name,":user_type"=>$user_type));
-   
+       
         if($pdoExec){
-            echo'WORKSS';
+            
+            header("Location: properties.php");
+            exit;
+            
         }else{
             echo 'Failed';
         }
