@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    include 'login_functions.php';
+    require 'header.php';
+?>
+
+
 <!DOCTYPE html>
 <html>
     <style>
@@ -8,29 +15,28 @@
             padding: 16px;
             background-color: white;
         }
+        
     </style>
     <head>
     <link rel="stylesheet" type="text/css" href="myboringfilename.css">
     </head>
-<?php
-    require 'header.php';
-?>
+
 <body>
     <div class="background-image">
         <h1 style="font-size: 72px;">AVAILABLE PROPERTIES</h1>
     </div>
-        <form class="loginForm">
+        <form class="loginForm" method=POST>
             <h1>Login</h1>
             <label for="email"><b>Email</b></label><br>
             <input type="text" placeholder="Enter Email" name="email" required><br>
 
             <label for="password"><b>Password</b></label><br>
-            <input type="password" placeholder="Enter Password" name="password" required><br>
+            <input type="text" placeholder="Enter Password" name="password" required><br>
 
             <button type="submit" class="btn">Login</button><br>
 
             If you do not have an account click here!<br>
-             <button type="submit" class="btn">Create Account</button>
+             <button type="submit" value="login" class="btn">Create Account</button>
             
 
         </form>
