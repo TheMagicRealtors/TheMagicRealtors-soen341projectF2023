@@ -3,19 +3,43 @@
 <!DOCTYPE html>
 <html>
     <style>
-        .loginForm {
+        .createAccountForm {
             position: center;
             margin: auto;
-            max-width: 500px;
+            max-width: 600px;
             padding: 16px;
+            left:50%;
+            right:50%;
+            transform: translate(-50%,-505);
             background-color: white;
+            color:#000080;
+            text-align:center;
         }
+
+        input[type=text]{
+            width:100%;
+            padding:15px;
+            margin:5px 0 22px 0;
+            border:none;
+            background:#f1f1f1;
+        }
+
+        input[type=text]:focus{
+            backgroud-colour:#ddd;
+            outline:none;
+        }
+
+        input[type="radio"]{
+            margin: 0 10px 0 10px;
+        }
+  
     </style>
     <head>
     <link rel="stylesheet" type="text/css" href="myboringfilename.css">
     </head>
 <?php
     include 'property_functions.php';
+    // include 'create_account_function.php';
     require 'header.php';
 ?>
 <?php
@@ -30,9 +54,12 @@
   
         $pdoResult = $conn->prepare($pdoQuery);
         $pdoExec = $pdoResult->execute(array(":email"=>$email,":passwords"=>$passwords,":full_name"=>$full_name,":user_type"=>$user_type));
-   
+       
         if($pdoExec){
-            echo'WORKSS';
+            
+            header("Location: properties.php");
+            exit();
+            
         }else{
             echo 'Failed';
         }
@@ -44,9 +71,10 @@
 <body>
     <div class="background-image">
         <h1 style="font-size: 72px;">AVAILABLE PROPERTIES</h1>
-    </div>
-        <form method= POST class="loginForm">
-            <h1>Create Account</h1>
+    </div >
+    <div style="font: 95% Arial, Helvetica, sans-serif; padding: 16px;background: #F7F7F7;">
+        <form method= POST class="createAccountForm">
+            <h1 style=text-align:center>Create Account</h1>
             <label for="email"><b>Email</b></label><br>
             <input type="text" placeholder="Enter Email" name="email" required><br>
 
@@ -56,24 +84,17 @@
             <label for="full_name"><b>Full Name</b></label><br>
             <input type="text" placeholder="Full Name" name="full_name" required><br>
 
-            <label for=""><b>What type of user are you?</b></label><br>
-            1-Homebuyer<br>
-            2-Property Renter<br>
-            3-Broker<br>
-            4-System Administrator<br>
-            <input type="number" placeholder="user type (enter number)" name="user_type" required><br>
-
-            <!-- <select name="user_type" id="user_type">
-                <option value="Homebuyers">Homebuyers</option>
-                <option value="Property Renters">Property Renters</option>
-                <option value="Brokers">Brokers</option>
-                <option value="System Administrator">System Administrator</option>
-             </select><br> -->
-
-            <button type="submit" class="btn" name=submit>Create Account!</button><br>
+            <label for=""><b>What type of user are you?</b></label><br><br>
+             <input type="radio" name="user_type" value=1>Homebuyer 
+             <input type="radio" name="user_type" value=2>Property Renter
+             <input type="radio" name="user_type" value=2>Broker
+             <input type="radio" name="user_type" value=2>System Administrator
+            <br><br>
+            <button type="submit" class="btn" name=submit style="background-color: #000080;color:white" >Create Account!</button><br>
             
 
         </form>
+     
     </div>
 
     <script src="js/main.js"></script>
@@ -82,3 +103,6 @@
 </body>
 
 </html>
+<?php
+ require 'footer.php';
+ ?>
