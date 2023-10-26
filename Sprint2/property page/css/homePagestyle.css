@@ -1,0 +1,23 @@
+.titlePart {
+    background-color: #000080;
+    opacity:0.8;
+    color: white;
+}
+.card {
+    height:300px;
+    border-color: #000080;
+    border-width: 5px;
+}
+h5 {
+    margin-top: -50px;
+}
+@media(min-width:1250px) {
+    .card-img-top{
+        padding: 0%;
+    
+    }
+  .card-title {
+     margin:-35px;   
+    }
+}
+  
