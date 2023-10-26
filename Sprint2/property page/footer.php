@@ -8,10 +8,8 @@
             <td><a class="nav-link" href="properties.php">Properties</a></td>
             <td><a class="nav-link" href="#Broker">Connect with a Broker</a></td>
              <td><a class="nav-link" href="login.php">Log In</a></td>
-             <td><a class="nav-link" href="#SignUp">Sign Up</a></td>
+             <td><a class="nav-link" href="create_account.php">Sign Up</a></td>
     </table>
 </div>
 </footer
 
-</body>
-</html>
