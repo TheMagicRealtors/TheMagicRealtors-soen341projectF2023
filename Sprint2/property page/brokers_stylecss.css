@@ -1,22 +1,25 @@
 body {
-    font-weight: 300px;
+    font-weight: 300;
     font-family: Arial, sans-serif;
 }
 
 img {
-    max-width:100%;
+    max-width: 100%;
     height: auto;
-    }
+}
 
 a {
     transition: 0.5s;
 }
-.col-lg-4 .col-md-6 .col-sm-12 {
+
+.col-lg-4,
+.col-md-6,
+.col-sm-12 {
     margin: 20px;
 }
 
 .loginForm {
-    color:aqua;
+    color: aqua;
 }
 
 .card-text {
@@ -34,7 +37,7 @@ a {
 }
 
 .card-body img {
-  max-width: 20px;
-  height: 20px;
-  margin: 0 auto 15px;
+    max-width: 20px;
+    height: 20px;
+    margin: 0 auto 15px;
 }
