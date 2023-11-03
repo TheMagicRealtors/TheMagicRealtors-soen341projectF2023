@@ -20,7 +20,7 @@
     <!-- Brokers -->
     <div class="container-fluid">
         <?php
-        include 'broker_functions.php';
+        include 'brokers_functions.php';
 
         $brokers = getBrokerList();
 
