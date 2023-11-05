@@ -91,7 +91,7 @@
             <button type="submit" class="loginButton">Login</button><br><br>
 
             Don't have an account? Click below to create one<br><br>
-             <button type="submit" value="login" class="loginButton">Create Account</button>
+             <button type="button" onclick="window.location.href = 'create_account.php';" class="loginButton">Create Account</button>
         </form>
     </div>
 
