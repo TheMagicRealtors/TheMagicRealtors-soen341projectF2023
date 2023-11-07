@@ -3,12 +3,6 @@
 ?>
 
 <style>
-.centered-form {
-    display: flex;
-    align-items: right;
-    justify-content: right;
-    height: 50vh;
-}
 .filter-form {
     background-color: #f5f5f5;
     padding: 20px;
@@ -16,14 +10,14 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 10px;
     width: 50%;
-    margin-left
-}
+
 .filter-form label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
     font-size: 16px;
 }
+
 .filter-form select {
     width: 100%;
     padding: 10px;
@@ -31,53 +25,52 @@
     border-radius: 5px;
     font-size: 14px;
     margin-bottom: 10px;
-}
+  }
 .filter-form select option {
     font-size: 14px;
     color: #333;
 }
-.filter-form select:focus {
-    border-color: #007BFF; /* Highlight when focused */
-    outline: none;
-}
-</style>
 <div>
         <h1 style="font-size: 72px; font-color: white;">................................................</h1>
     </div>
-    
-    <div class="centered-form">
-        <form class="filter-form">
-            <p style="text-align:center; font-weight:bold;">Filter Options</p>
-            <label for="price">Price</label>
-            <select name="price" id="price">
-                <option value=""></option>
-                <option value="below">Below 500,000$</option>
-                <option value="above">Above 500,000$</option>
-            </select>
-            <label for="bed">Bedrooms</label>
-            <select name="bed" id="bed">
-                <option value=""></option>
-                <option value="one">1</option>
-                <option value="two">2</option>
-                <option value="three">3</option>
-                <option value="four">4</option>
-                <option value="five">5</option>
-            </select>
-            <label for="house">House Type</label>
-            <select name="house" id="house">
-                <option value=""></option>
-                <option value="duplex">Duplex</option>
-                <option value="condominium">Condominium</option>
-                <option value="two-storey">Two-Storey</option>
-                <option value="bungalow">Bungalow</option>
-            </select>
-            <button class="btn btn-outline-light" type="submit" value = "Apply" style="background-color:#000080; ">Apply</button>
-        </form>
-    </div>
-   
     <div>
         <h1 style="font-size: 72px;">AVAILABLE PROPERTIES</h1>
     </div>
+
+<div class="centered-form">
+    <form method="post" action="filter.php" class="filter-form">
+        <p style = "text-align:center; font-weight:bold;">Filter Options</p>
+
+<label for="price">Price</label>
+<select name="price" id="price">
+  <option value=""></option> 
+  <option value="below">Below 500,000$</option>
+  <option value="over">Over 500,000$</option>
+</select>
+
+<label for="bed">Bedrooms</label>
+<select name="bed" id="bed">
+  <option value=""></option> 
+  <option value="one">1</option>
+  <option value="two">2</option>
+  <option value="three">3</option>
+  <option value="four">4</option>
+  <option value="five">5</option>
+</select>
+
+<label for="house">House Type</label>
+<select name="house" id="house">
+  <option value=""></option> 
+  <option value="duplex">Duplex</option>
+  <option value="condonomium">Condonomium</option>
+  <option value="two-storey">Two-Storey</option>
+  <option value="bungalow">Bungalow</option>
+  <option value="">5</option>
+</select>
+
+<button class="btn btn-outline-light" type="submit" value = "apply" style="background-color:#000080; ">Apply</button>
+    </form> 
+</div>
 
     <!-- Properties -->
     <div class="container-fluid">
