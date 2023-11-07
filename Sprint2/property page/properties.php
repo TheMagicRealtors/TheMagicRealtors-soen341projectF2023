@@ -5,9 +5,10 @@
 <style>
 .centered-form {
     display: flex;
-    align-items: right;
-    justify-content: right;
+    align-items: center;
+    justify-content: center;
     height: 50vh; 
+    background-image: url("https://i.pinimg.com/736x/73/d6/f2/73d6f285447bb2762913bcf1c00fe87b.jpg");
 }
 
 .filter-form {
@@ -44,9 +45,7 @@
 <div>
         <h1 style="font-size: 72px; color: white;">................................................</h1>
     </div>
-    <div>
-        <h1 style="font-size: 72px;">AVAILABLE PROPERTIES</h1>
-    </div>
+
 
 <div class="centered-form">
     <form method="post" action="filter.php" class="filter-form">
@@ -81,6 +80,11 @@
 <button class="btn btn-outline-light" type="submit" value = "apply" style="background-color:#000080; ">Apply</button>
     </form> 
 </div>
+
+<div>
+    <p style="font-size:50px; color:black;">Available Properties</p>
+</div>
+
 
     <!-- Properties -->
     <div class="container-fluid">

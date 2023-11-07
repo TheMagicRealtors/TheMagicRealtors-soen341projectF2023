@@ -8,14 +8,39 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="css/brokers_stylescss.css">
     <title>The Magic Realtors</title>
+<style>
+    .centered-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh; 
+    background-image: url("https://i.pinimg.com/736x/73/d6/f2/73d6f285447bb2762913bcf1c00fe87b.jpg");
+}
+
+.broker-search-form {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 50%;
+}
+</style>
 </head>
 <body>
     <!-- Header menu -->
     <?php include 'header.php'; ?>
 
-    <div>
-        <h1 style="font-size: 72px;">AVAILABLE BROKERS</h1>
+    <div class="centered-form">
+        <form class="broker-search-form" method="post" action="broker_search.php">
+            <input class="form-control me-2" type="search" placeholder="Search Broker's Full Name" aria-label="Search" type="text" name="broker_name" id="broker_name">
+            <button class="btn btn-outline-light" type="submit" value = "Search" style="background-color:#000080; ">Search</button>
+        </form>
     </div>
+
+    <div>
+    <p style="font-size:50px; color:black;">Available Brokers</p>
+</div>
 
     <!-- Brokers -->
     <div class="container-fluid">
@@ -31,9 +56,9 @@
                 echo '<div class="card-body">';
                 echo '<h5 class="card-title">' . $broker['broker_name'] . '</h5>';
                 echo '<p class="card-text"><b>Personal Information:</b></p>';
-                echo '<p><img src="BrokerImages/email_broker.png" alt="Email Icon"> <span class="email">' . $broker['broker_email'] . '</span></p>';
-                echo '<p><img src="BrokerImages/phone_broker.png" alt="Phone Icon"> <span class="phone">' . $broker['broker_phone'] . '</span></p>';
-                echo '<p><img src="BrokerImages/address_broker.png" alt="Address Icon"> <span class="address">' . $broker['broker_address'] . '</span></p>';
+                echo '<p>' . $broker['broker_email'] . '</span></p>';
+                echo '<p>' . $broker['broker_phone'] . '</span></p>';
+                echo '<p>' . $broker['broker_address'] . '</span></p>';
                 echo '<a href="#" class="btn btn-outline-light" style="background-color: #000080;">Contact</a>';
                 echo '</div>';
                 echo '</div>';
