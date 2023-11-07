@@ -25,6 +25,9 @@ $stmt->execute();
 // Display the search results
 
 if ($stmt->rowCount() > 0) {
+    echo '<div>
+    <h1 style="font-size: 72px; color: white;">................................................</h1>
+</div>';
     echo "<h2>Search Results</h2>";
     echo '<div class="row">';
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -40,6 +43,9 @@ if ($stmt->rowCount() > 0) {
     }
     echo '</div>';
 } else {
+    echo '<div>
+    <h1 style="font-size: 72px; color: white;">................................................</h1>
+</div>';
     echo "No properties match your search criteria.";
 }
 ?>
