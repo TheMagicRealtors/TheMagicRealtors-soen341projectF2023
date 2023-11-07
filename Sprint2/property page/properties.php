@@ -3,6 +3,13 @@
 ?>
 
 <style>
+.centered-form {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    height: 50vh; 
+}
+
 .filter-form {
     background-color: #f5f5f5;
     padding: 20px;
@@ -10,6 +17,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 10px;
     width: 50%;
+}
 
 .filter-form label {
     display: block;
@@ -30,8 +38,11 @@
     font-size: 14px;
     color: #333;
 }
+
+</style>
+
 <div>
-        <h1 style="font-size: 72px; font-color: white;">................................................</h1>
+        <h1 style="font-size: 72px; color: white;">................................................</h1>
     </div>
     <div>
         <h1 style="font-size: 72px;">AVAILABLE PROPERTIES</h1>
@@ -51,21 +62,20 @@
 <label for="bed">Bedrooms</label>
 <select name="bed" id="bed">
   <option value=""></option> 
-  <option value="one">1</option>
-  <option value="two">2</option>
-  <option value="three">3</option>
-  <option value="four">4</option>
-  <option value="five">5</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
 </select>
 
 <label for="house">House Type</label>
 <select name="house" id="house">
   <option value=""></option> 
-  <option value="duplex">Duplex</option>
-  <option value="condonomium">Condonomium</option>
-  <option value="two-storey">Two-Storey</option>
-  <option value="bungalow">Bungalow</option>
-  <option value="">5</option>
+  <option value="Duplex">Duplex</option>
+  <option value="Condominium">Condominium</option>
+  <option value="Two-Storey House">Two-Storey House</option>
+  <option value="Bungalow">Bungalow</option>
 </select>
 
 <button class="btn btn-outline-light" type="submit" value = "apply" style="background-color:#000080; ">Apply</button>
