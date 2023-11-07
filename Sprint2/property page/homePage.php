@@ -26,7 +26,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item"><a class="nav-link" href="properties.php">Properties</a>
               </li>
-              <li class="nav-item"><a class="nav-link" href="broker.php">Connect with a Broker</a>
+              <li class="nav-item"><a class="nav-link" href="brokersMain.html">Connect with a Broker</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#MyAccount" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -37,6 +37,8 @@
                   <li><a class="dropdown-item" href="create_account.php" style="text-align: center;">Sign Up</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#" style="text-align: center;">My Favorites</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="updateAccount.php" style="text-align: center;"> Update My Account</a></li>
                 </ul>
               </li>
             </ul>
@@ -69,7 +71,7 @@
             <div class="card" style="border-radius: 30px;">
               <i class="bi bi-bookmark-heart"  style="font-size: 100px; text-align: center;"></i>
                 <div class="card-body">
-                    <h5 class="card-title text-center px-2" style="text-align: center;">Add properties to Favorites</h5>
+                    <h5 class="card-title text-center px-2" style="text-align: center;">Favorite your Properties</h5>
 
                 </div>
               </div>

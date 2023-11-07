@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html>
+
     <style>
         .createAccountForm {
             position: center;
@@ -36,6 +37,8 @@
     </style>
     <head>
     <link rel="stylesheet" type="text/css" href="myboringfilename.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+            <link rel="stylesheet" href="css/main.min.css">
     </head>
 <?php
     include 'property_functions.php';
