@@ -10,7 +10,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 10px;
     width: 50%;
-
+}
 .filter-form label {
     display: block;
     font-weight: bold;
@@ -30,8 +30,9 @@
     font-size: 14px;
     color: #333;
 }
+</style>
 <div>
-        <h1 style="font-size: 72px; font-color: white;">................................................</h1>
+        <h1 style="font-size: 72px; color: white;">................................................</h1>
     </div>
     <div>
         <h1 style="font-size: 72px;">AVAILABLE PROPERTIES</h1>
