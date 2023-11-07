@@ -3,13 +3,6 @@
 ?>
 
 <style>
-
-.centered-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50vh; 
-}
 .filter-form {
     background-color: #f5f5f5;
     padding: 20px;
@@ -17,7 +10,6 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 10px;
     width: 50%;
-}
 
 .filter-form label {
     display: block;
@@ -33,19 +25,14 @@
     border-radius: 5px;
     font-size: 14px;
     margin-bottom: 10px;
-}
-
+  }
 .filter-form select option {
     font-size: 14px;
     color: #333;
 }
-
-.filter-form select:focus {
-    border-color: #007BFF; 
-    outline: none;
-}
-</style>
-
+<div>
+        <h1 style="font-size: 72px; font-color: white;">................................................</h1>
+    </div>
     <div>
         <h1 style="font-size: 72px;">AVAILABLE PROPERTIES</h1>
     </div>
