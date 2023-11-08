@@ -44,6 +44,8 @@
                           </li>
                           <li class="nav-item"><a class="nav-link" href="brokers.php">Connect with a Broker</a>
                           </li>
+                          <li class="nav-item"><a class="nav-link" href="logout.php">logout</a>
+                          </li>
                           <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#MyAccount" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             My Account</a>
