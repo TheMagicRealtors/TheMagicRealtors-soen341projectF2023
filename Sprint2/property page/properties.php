@@ -1,4 +1,5 @@
 <?php
+    require 'loginRestrict.php';
     require 'header.php';
 ?>
 

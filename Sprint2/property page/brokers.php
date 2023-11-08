@@ -1,3 +1,6 @@
+<?php
+    require 'loginRestrict.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
