@@ -1,5 +1,6 @@
 <?php
 include 'property_functions.php';
+require 'loginRestrict.php';
 require 'header.php';
 
 if (isset($_GET['address'])) {
