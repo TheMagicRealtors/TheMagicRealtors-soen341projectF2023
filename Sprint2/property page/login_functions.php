@@ -31,11 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($user) {
             // User found, now verify the password
-            if (/*password_verify($password, $user['password'])*/$password == $user['password']) {
+            if ($password == $user['passwords']) {
                 // Password is correct
                 // You can set session variables and redirect the user to a secure page
                 session_start();
-                $_SESSION['id'] = $user['id'];
+                $_SESSION['user_id'] = $user['id'];
                 header("Location: properties.php");
                 exit();
             } else {
