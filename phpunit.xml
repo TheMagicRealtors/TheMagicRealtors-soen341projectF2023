@@ -8,5 +8,6 @@
             <directory>TheMagicRealtors-soen341projectF2023</directory>
         </testsuite>
     </testsuites>
-    <!-- Add other configuration options as needed -->
+
+         
 </phpunit>
