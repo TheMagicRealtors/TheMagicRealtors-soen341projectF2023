@@ -33,3 +33,4 @@ jobs:
 
       - name: Run PHPUnit tests
         run: vendor/bin/phpunit
+        working-directory: Sprint2/property page
