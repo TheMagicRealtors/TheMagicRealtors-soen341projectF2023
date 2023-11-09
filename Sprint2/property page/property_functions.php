@@ -25,6 +25,35 @@ function getPropertyFromAddress($address){
     $statement->execute([$address]);
     return $statement->fetch(PDO::FETCH_ASSOC);
 }
+function createProperty($city, $district, $address, $house_type, $garage, $price, $nb_bedrooms, $nb_bathrooms, $description, $image_url) {
+    global $pdo;
 
+        // Check if description is not null or empty before inserting
+        if ($description === null || $description === "") {
+            return false; 
+        }
+    
+        $stmt = $pdo->prepare("INSERT INTO properties (city, district, address, house_type, garage, price, nb_bedrooms, nb_bathrooms, description) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        return $stmt->execute([$city, $district, $address, $house_type, $garage, $price, $nb_bedrooms, $nb_bathrooms, $description, $image_url]);
+    }
+    
+function updateProperty($properties_id, $newPrice, $newDescription) {
+    global $pdo;
+    $stmt = $pdo->prepare("UPDATE properties SET price = ?, description = ? WHERE properties_id = ?");
+    return $stmt->execute([$newPrice, $newDescription, $properties_id]);
+}
+function deleteProperty($properties_id) {
+    global $pdo;
+    $stmt = $pdo->prepare("DELETE FROM properties WHERE properties_id = ?");
+    return $stmt->execute([$properties_id]);
+}
+
+function getPropertyData($properties_id)
+{
+    global $pdo;
+    $stmt = $pdo->prepare('SELECT properties_id, city , district, address, price, garage, nb_bedrooms, nb_bathrooms, house_type, description  FROM properties WHERE properties_id = ?');
+    $stmt->execute([$properties_id]);
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
 
 ?>
