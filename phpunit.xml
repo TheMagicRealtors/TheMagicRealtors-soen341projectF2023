@@ -5,7 +5,7 @@
          colors="true">
     <testsuites>
         <testsuite name="MyTestSuite">
-            <directory>tests</directory>
+            <directory>TheMagicRealtors-soen341projectF2023</directory>
         </testsuite>
     </testsuites>
     <!-- Add other configuration options as needed -->
