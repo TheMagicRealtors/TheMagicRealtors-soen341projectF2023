@@ -1,0 +1,35 @@
+name: PHP Continuous Integration
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up PHP
+        uses: TheMagicRealtors/setup-php@v2
+        with:
+          php-version: 7.4
+
+      - name: Install Composer
+        run: |
+          php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+          php composer-setup.php
+          php -r "unlink('composer-setup.php');"
+          mv composer.phar /usr/local/bin/composer
+
+      - name: Install dependencies
+        run: composer install
+
+      - name: Run PHPUnit tests
+        run: vendor/bin/phpunit
