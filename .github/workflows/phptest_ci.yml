@@ -17,7 +17,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set up PHP
-        uses: ./.github/actions/setup-php@v2
+        uses: TheMagicRealtors/TheMagicRealtors-soen341projectF2023@main
+
         with:
           php-version: 7.4
 
