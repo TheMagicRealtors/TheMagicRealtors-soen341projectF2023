@@ -4,10 +4,10 @@
          bootstrap="vendor/autoload.php"
          colors="true">
     <testsuites>
-        <testsuite name="MyTestSuite">
-            <directory>TheMagicRealtors-soen341projectF2023</directory>
+        <testsuite name="PropertyPageTests">
+            <directory>./Sprint2/property page</directory>
         </testsuite>
     </testsuites>
-
-         
+    <!-- Add other configuration options as needed -->
 </phpunit>
+
