@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,40 +17,42 @@
 </head>
 <body class="bg-light"> 
   <header class="aboutSection">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="Mynavbar">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#" style="font-weight: bold; font-size: 35px;">TMR</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item"><a class="nav-link" href="properties.html">Properties</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="brokersMain.html">Connect with a Broker</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#MyAccount" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                My Account</a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="login.php" style="text-align: center;">Log In</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="create_account.php" style="text-align: center;">Sign Up</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#" style="text-align: center;">My Favorites</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="updateAccount.php" style="text-align: center;"> Update My Account</a></li>
-                </ul>
-              </li>
-            </ul>
-    
-            <form method="post" action="search.php" class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search by City" aria-label="Search" type="text" name="city" id="city">
-              <button class="btn btn-outline-light" type="submit" value = "Search" style="background-color:#000080; ">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="Mynavbar">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="homePage.php" style="font-weight: bold; font-size: 35px;">TMR</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item"><a class="nav-link" href="properties.php">Properties</a>
+                          </li>
+                          <li class="nav-item"><a class="nav-link" href="brokers.php">Connect with a Broker</a>
+                          </li>
+                          <li class="nav-item"><a class="nav-link" href="logout.php">logout</a>
+                          </li>
+                          <li class="nav-item"><a class="nav-link" href="property_forms.php">Edit Properties</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#MyAccount" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            My Account</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="login.php" style="text-align: center;">Log In</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="create_account.php" style="text-align: center;">Sign Up</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="#" style="text-align: center;">My Favorites</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                
+                        <form method="post" action="search.php" class="d-flex">
+                          <input class="form-control me-2" type="search" placeholder="Search by City" aria-label="Search" type="text" name="city" id="city">
+                          <button class="btn btn-outline-light" type="submit" value = "Search" style="background-color:#000080; ">Search</button>
+                        </form>
+                      </div>
+                    </div>
+                  </nav>
   </header>
 <div class="container-fluid p-4 mb-2 titlePart" style="margin-top:70px;">
 <h1 style="text-align:center; ">The Magic Realtors</h1>
@@ -95,7 +98,20 @@
         </div>
 
     </div>
-
+    <footer style="background-color:#000080; color:white; font-family:arial; padding: 50px; text-align:center;">
+    <p>
+        Privacy Disclaimer<br>We are devoted to protecting every user's privacy.
+    </p>
+    <div>
+    <table style="width: 100%;">
+        <tr>
+            <td><a class="nav-link" href="properties.php">Properties</a></td>
+            <td><a class="nav-link" href="#Broker">Connect with a Broker</a></td>
+             <td><a class="nav-link" href="login.php">Log In</a></td>
+             <td><a class="nav-link" href="create_account.php">Sign Up</a></td>
+    </table>
+</div>
+</footer>
   
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
