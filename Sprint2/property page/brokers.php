@@ -55,11 +55,7 @@
                 echo '<div class="card col-lg-4 col-md-6 col-sm-12">';
                 echo '<div class="card-body">';
                 echo '<h5 class="card-title">' . $broker['broker_name'] . '</h5>';
-                echo '<p class="card-text"><b>Personal Information:</b></p>';
-                echo '<p>' . $broker['broker_email'] . '</span></p>';
-                echo '<p>' . $broker['broker_phone'] . '</span></p>';
                 echo '<p>' . $broker['broker_address'] . '</span></p>';
-                echo '<a href="#" class="btn btn-outline-light" style="background-color: #000080;">Contact</a>';
                 echo '</div>';
                 echo '</div>';
             }
