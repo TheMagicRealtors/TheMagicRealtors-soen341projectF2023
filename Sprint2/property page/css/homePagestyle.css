@@ -1,0 +1,20 @@
+.titlePart {
+    background-color: #000080;
+    opacity:0.8;
+    color: white;
+}
+.card {
+    border-color: #000080;
+    border-width: 5px;
+}
+
+@media((min-width:762px) and (max-width:991px)) {
+.card {
+    margin: 10px;
+}
+}
+@media (max-width:761px) {
+    .card {
+        margin: 10px;
+    }
+}
