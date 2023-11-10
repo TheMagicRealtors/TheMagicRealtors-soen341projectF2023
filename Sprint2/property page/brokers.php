@@ -58,11 +58,7 @@ require 'loginRestrict.php';
                 echo '<div class="card col-lg-4 col-md-6 col-sm-12">';
                 echo '<div class="card-body">';
                 echo '<h5 class="card-title">' . $broker['broker_name'] . '</h5>';
-                echo '<p class="card-text"><b>Personal Information:</b></p>';
-                echo '<p><i class="bi bi-envelope"></i> ' . $broker['broker_email'] . '</p>';
-                echo '<p><i class="bi bi-telephone"></i> ' . $broker['broker_phone'] . '</p>';
                 echo '<p><i class="bi bi-geo-alt"></i> ' . $broker['broker_address'] . '</p>';
-                echo '<a href="#" class="btn btn-outline-light" style="background-color: #000080;">Contact</a>';
                 echo '</div>';
                 echo '</div>';
             }
