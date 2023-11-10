@@ -39,5 +39,40 @@ if($property['garage'] == 0){
     echo '</div>';
     echo '</div>';
 
-    include 'footer.php';
 ?>
+
+<!DOCTYPE html>
+<html>
+    <style>
+        .loginButton {
+            background-color: #000080;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 130px;
+            opacity: 0.9;
+        }
+
+        .loginButton:hover {
+            opacity: 1;
+        }
+    </style>
+    <head>
+    <link rel="stylesheet" type="text/css" href="myboringfilename.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+<body>
+    <button type="button" onclick="window.location.href = 'submitOffer.php';" class="loginButton">Submit Offer</button>
+
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <br>
+    <br>
+    <?php
+        include 'footer.php';
+    ?>
+
+</body>
+</html>
