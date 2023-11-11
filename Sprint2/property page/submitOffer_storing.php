@@ -11,19 +11,26 @@ function pdo_connect_mysql() {
         exit('Failed to connect to database!'); 
     } 
 }
+// function function_alert() { 
+      
+//     // Display the alert box  
+//     echo "<script>alert("You have successfully submitted your offer. Click ok to returen to properties page. ");</script>"; 
+// } 
 $pdo = pdo_connect_mysql();
     if (isset($_POST['submit'])) {
-        $broker_name_so= $_POST['broker_name_so'];
-        $offer = $_POST['offer'];
-      
+        $broker_name_so = $_POST['broker_name_so'];
+        $offer= $_POST['offer'];
+   
+    
         $conn = pdo_connect_mysql();
-        $pdoQuery= "INSERT INTO 'submit_offer'('offer_id', 'broker_name_so', 'offer') VALUES (NULL,:broker_name_so, :offer)";
+        $pdoQuery= "INSERT INTO `submit_offer`(`offer_id`, `broker_name_so`, `offer`) VALUES (NULL,:broker_name_so,:offer)";
   
         $pdoResult = $conn->prepare($pdoQuery);
         $pdoExec = $pdoResult->execute(array(":broker_name_so"=>$broker_name_so,":offer"=>$offer));
        
         if($pdoExec){
-           echo 'You created your account successfully. Log in to continue.';
+           echo 'You Submitted your offer.';
+         
             header("Location: properties.php");
             exit();
             
