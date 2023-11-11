@@ -1,12 +1,17 @@
 <?php
+// session_start();
+
 include 'property_functions.php';
+
 require 'header.php';
+require 'login_functions.php';
 
 if (isset($_GET['address'])) {
     $selectedAddress = $_GET['address'];
 }
 
 $property = getPropertyFromAddress($selectedAddress);
+
 
 $garage = '';
 if($property['garage'] == 0){
@@ -36,6 +41,11 @@ if($property['garage'] == 0){
     echo '</div>';
     echo '<div style="background-color: rgb(255, 255, 255); padding: 30px;">';
     echo '<button class="btn btn-outline-light" style="background-color: #000080;" onclick="saveVisitAddress(\'' . $property['address'] . '\')">Book a Visit</button>';
+    echo $user['user_type'];
+    if($userType == '2'){
+        echo '<button class="btn btn-outline-light" style="background-color: #000080;" onclick="submitOffer()">Make Offer</button>';
+    }
+    
     echo '</div>';
     echo '</div>';
 
