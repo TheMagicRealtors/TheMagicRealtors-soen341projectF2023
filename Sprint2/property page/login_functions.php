@@ -38,8 +38,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 session_start();
                 $_SESSION['id'] = $user['id'];
                 $_SESSION["logged_in"] = true;
+                $_SESSION['user_id'] = $user['id'];
                 header("Location: properties.php");
-               // exit();
+                exit();
             } else {
                 // Password is incorrect
                 echo "Invalid password";
