@@ -29,7 +29,7 @@
             background-size: cover;
             position: relative;
         }
-        .loginForm {
+        .CAForm {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -79,17 +79,19 @@
     <div class="background-image">
         <h1 style="font-size: 72px;">AVAILABLE PROPERTIES</h1>
     </div>
-    <div class="image_background">
-        <form class="loginForm" method=POST>
-            <h1><b>Submit Offer</b></h1>
-            <label for="broker_name_so"><b>What is your full name?</b></label><br>
-            <input type="text" placeholder="Full Name" name="broker_name_so" required><br>
 
-            <label for="offer"><b>What is your offer?</b></label><br>
-            <input type="text" placeholder="Offer" name="offer" required><br>
+    <div class= image_background >
+        <form method= POST class="CAForm">
+            
+            <h1 style=text-align:center><b>Submit Offer</b></h1>
+            <label for="broker_name_so"><b>Broker Name</b></label><br>
+            <input type="text" placeholder="Enter Full Name" name="broker_name_so" required><br>
 
-            <button type="submit" class="loginButton">Submit</button><br><br>
-
+            <label for="offer"><b>Offer Price</b></label><br>
+            <input type="text" placeholder="Enter Offer" name="offer" required><br>
+        
+            <button type="submit" class="loginButton" name=submit style="background-color: #000080;color:white" >Submit Your Offer</button><br>
+            
         </form>
     </div>
 
