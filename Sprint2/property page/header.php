@@ -27,6 +27,9 @@
                   propertyVisit = address;
                   window.location.href = 'book_visit.php?address=' + encodeURIComponent(address);
                 }
+                function submitOffer(){
+                  window.location.href = 'submitOffer.php?';
+                }
             </script>
         </head>
 
