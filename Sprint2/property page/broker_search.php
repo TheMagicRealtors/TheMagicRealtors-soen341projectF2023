@@ -31,8 +31,8 @@ if ($stmt->rowCount() > 0) {
         echo '<p class="card-text"><b>Personal Information:</b></p>';
         echo '<p><span class="email">' . $row['broker_email'] . '</span>';
         echo '<p><span class="phone">' . $row['broker_phone'] . '</span>';
-        echo '<p><span class="address">' . $row['broker_address'] . '</span>';
-        echo '<a href="#" class="btn btn-outline-light" style="background-color: #000080;">Contact</a>';
+        echo '<p><span class="address">' . $row['broker_address'] . '</span></p>';
+        echo '<a href="requestinfo.php" class="btn btn-outline-light" style="background-color: #000080;">Contact</a>';
         echo '</div>';
         echo '</div>';
     }
