@@ -53,40 +53,6 @@
         <h1 style="font-size: 72px; color: white;">................................................</h1>
     </div>
 
-
-<div class="centered-form">
-    <form method="post" action="filter.php" class="filter-form">
-        <p style = "text-align:center; font-weight:bold;">Filter Options</p>
-
-<label for="price">Price</label>
-<select name="price" id="price">
-  <option value=""></option> 
-  <option value="below">Below 500,000$</option>
-  <option value="over">Over 500,000$</option>
-</select>
-
-<label for="bed">Bedrooms</label>
-<select name="bed" id="bed">
-  <option value=""></option> 
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-</select>
-
-<label for="house">House Type</label>
-<select name="house" id="house">
-  <option value=""></option> 
-  <option value="Duplex">Duplex</option>
-  <option value="Condominium">Condominium</option>
-  <option value="Two-Storey House">Two-Storey House</option>
-  <option value="Bungalow">Bungalow</option>
-</select>
-
-<button class="btn btn-outline-light" type="submit" value = "apply" style="background-color:#000080; ">Apply</button>
-    </form> 
-</div>
 <!-- "Manage Properties" Button -->
 <div class="container-fluid">
      <a class="btn btn-primary float-end mt-3" id="managePropertiesButton" href="property_forms.php" style="background-color: #000080; ">Manage Properties</a>
@@ -94,7 +60,7 @@
 </div>
 
 <div>
-    <p style="font-size:50px; color:black;">Available Properties <br> 
+    <p style="font-size:50px; color:black;">Available Properties For Rent<br> 
 </div>
 
     <!-- Properties -->
