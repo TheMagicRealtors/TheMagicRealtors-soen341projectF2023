@@ -19,16 +19,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["updateProperty"])) {
     }
 
     if (!empty($newDescription)) {
-        $existingBexistingPropertyData['description'] = $newDescription;
+        $existingPropertyData['description'] = $newDescription;
     }
+    
 
     
     // Perform the update with the modified data
-    if (updateProperty($properties_id, $existingPropertyData['price'], $existingpropertyData['description'])) {
-        header("Location: properties.html");
+    if (updateProperty($properties_id, $existingPropertyData['price'], $existingPropertyData['description'])) {
+        header("Location: properties.php");
         exit();
     } else {
-        echo "Failed to update the property.";
+        echo "Failed to update the property. Debug Info: " . print_r($pdo->errorInfo(), true);
     }
+    
+    
 }
 ?>

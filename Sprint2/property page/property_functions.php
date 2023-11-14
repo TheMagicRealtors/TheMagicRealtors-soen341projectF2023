@@ -33,7 +33,7 @@ function createProperty($city, $district, $address, $house_type, $garage, $price
             return false; 
         }
     
-        $stmt = $pdo->prepare("INSERT INTO properties (city, district, address, house_type, garage, price, nb_bedrooms, nb_bathrooms, description) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt = $pdo->prepare("INSERT INTO properties (city, district, address, house_type, garage, price, nb_bedrooms, nb_bathrooms, description, image_url) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?,?)");
         return $stmt->execute([$city, $district, $address, $house_type, $garage, $price, $nb_bedrooms, $nb_bathrooms, $description, $image_url]);
     }
     
@@ -47,6 +47,7 @@ function deleteProperty($properties_id) {
     $stmt = $pdo->prepare("DELETE FROM properties WHERE properties_id = ?");
     return $stmt->execute([$properties_id]);
 }
+
 
 function getPropertyData($properties_id)
 {
