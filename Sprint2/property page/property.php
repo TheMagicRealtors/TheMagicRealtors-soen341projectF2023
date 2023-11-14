@@ -2,7 +2,6 @@
 // session_start();
 
 include 'property_functions.php';
-require 'loginRestrict.php';
 require 'header.php';
 require 'login_functions.php';
 

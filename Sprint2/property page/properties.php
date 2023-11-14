@@ -1,5 +1,4 @@
 <?php
-    require 'loginRestrict.php';
     require 'header.php';
 ?>
 
@@ -95,13 +94,12 @@
 </div>
 
 <div>
-    <p style="font-size:50px; color:black;">Available Properties</p>
+    <p style="font-size:50px; color:black;">Available Properties <br> 
+    <a href="sort_newest.php" style="font-size: 25px;">Sort by Newest</a></p> 
 </div>
-
 
     <!-- Properties -->
     <div class="container-fluid">
-       
        <?php
         include 'property_functions.php';
         $conn = pdo_connect_mysql();
@@ -128,8 +126,6 @@
         } else {
             echo 'No properties found.';
         }
-        // Close the database connection
-        //$conn->close();
         ?>
         
     </div>
