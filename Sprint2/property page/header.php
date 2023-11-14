@@ -27,6 +27,9 @@
                   propertyVisit = address;
                   window.location.href = 'book_visit.php?address=' + encodeURIComponent(address);
                 }
+                function submitOffer(){
+                  window.location.href = 'submitOffer.php?';
+                }
             </script>
         </head>
 
@@ -43,6 +46,8 @@
                           <li class="nav-item"><a class="nav-link" href="properties.php">Properties</a>
                           </li>
                           <li class="nav-item"><a class="nav-link" href="brokers.php">Connect with a Broker</a>
+                          </li>
+                          <li class="nav-item"><a class="nav-link" href="mortgageCalculator.php">Mortgage Calculator</a>
                           </li>
                           <li class="nav-item"><a class="nav-link" href="logout.php">logout</a>
                           </li>
