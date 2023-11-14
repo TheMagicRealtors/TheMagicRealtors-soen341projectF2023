@@ -1,19 +1,20 @@
 <?php
-function pdo_connect_mysql() { 
-    $DATABASE_HOST = 'localhost'; 
-    $DATABASE_USER = 'root'; 
-    $DATABASE_PASS = ''; 
-    $DATABASE_NAME = 'magicrealtors'; 
-    try { 
-        return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS); 
-    } catch (PDOException $exception) { 
-        exit('Failed to connect to database!'); 
-    } 
-}
-$pdo = pdo_connect_mysql();
+include_once 'pdoConnect.php';
+// function pdo_connect_mysql() { 
+//     $DATABASE_HOST = 'localhost'; 
+//     $DATABASE_USER = 'root'; 
+//     $DATABASE_PASS = ''; 
+//     $DATABASE_NAME = 'magicrealtors'; 
+//     try { 
+//         return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS); 
+//     } catch (PDOException $exception) { 
+//         exit('Failed to connect to database!'); 
+//     } 
+// }
+// $pdo = pdo_connect_mysql();
 
 // session_start();
-    
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -36,9 +37,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // You can set session variables and redirect the user to a secure page
                 session_start();
                 $_SESSION['id'] = $user['id'];
-                $_SESSION["logged_in"] = true; 
+                $_SESSION["logged_in"] = true;
+                $_SESSION['user_id'] = $user['id'];
                 header("Location: properties.php");
-               // exit();
+                exit();
             } else {
                 // Password is incorrect
                 echo "Invalid password";
