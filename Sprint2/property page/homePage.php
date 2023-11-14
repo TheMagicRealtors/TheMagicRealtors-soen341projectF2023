@@ -31,8 +31,6 @@
                           </li>
                           <li class="nav-item"><a class="nav-link" href="logout.php">logout</a>
                           </li>
-                          <li class="nav-item"><a class="nav-link" href="property_forms.php">Edit Properties</a>
-                          </li>
                           <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#MyAccount" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             My Account</a>
@@ -54,10 +52,14 @@
                     </div>
                   </nav>
   </header>
-<div class="container-fluid p-4 mb-2 titlePart" style="margin-top:70px;">
+<!--<div class="container-fluid p-4 mb-2 titlePart" style="margin-top:70px;">
 <h1 style="text-align:center; ">The Magic Realtors</h1>
 <p style="text-align: center;">Find the perfect property that matches your dreams. We're your trusted partners in real estate.</p>
 
+</div>-->
+
+<div class="container-fluid">
+  <img src="property_images/homePageimage.jpg" class="img-fluid" style="opacity: 0.4">
 </div>
 <div class="container-fluid">
     <div class="row m-4 p-4">

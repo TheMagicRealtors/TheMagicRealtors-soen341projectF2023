@@ -1,5 +1,5 @@
 <footer style="background-color:#000080; color:white; font-family:arial; padding: 50px; text-align:center;">
-    <p>
+   <!-- <p>
         Privacy Disclaimer<br>We are devoted to protecting every user's privacy.
     </p>
     <div>
@@ -9,7 +9,9 @@
             <td><a class="nav-link" href="brokers.php">Connect with a Broker</a></td>
              <td><a class="nav-link" href="login.php">Log In</a></td>
              <td><a class="nav-link" href="create_account.php">Sign Up</a></td>
-    </table>
+    </table>-->
+
+
 </div>
 </footer>
 
