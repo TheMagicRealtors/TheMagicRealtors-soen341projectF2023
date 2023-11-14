@@ -2,7 +2,6 @@
 require 'loginRestrict.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["createProperty"])) {
-    $properties_id = $_POST['properties_id'];
     $city = $_POST['city'];
     $district = $_POST['district'];
     $address = $_POST['address'];
