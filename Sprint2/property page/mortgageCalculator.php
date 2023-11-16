@@ -88,7 +88,8 @@ require 'header.php';
             <input type="password" placeholder="Enter Password" name="password" required><br>
 
             <button type="submit" class="loginButton">Login</button>
-            <p class="error-message"><?php echo $errorMessage; ?></p>
+            <p class="error-message"><?php echo isset($errorMessage) ? $errorMessage : ''; ?></p>
+        
         </form>
     </div>
 
