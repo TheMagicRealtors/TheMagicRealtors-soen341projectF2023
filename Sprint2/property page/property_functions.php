@@ -1,4 +1,3 @@
-testingMain
 <?php
 function pdo_connect_mysql() { 
     $DATABASE_HOST = 'localhost'; 
@@ -57,3 +56,5 @@ function getPropertyData($properties_id)
     $stmt->execute([$properties_id]);
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
+
+?>

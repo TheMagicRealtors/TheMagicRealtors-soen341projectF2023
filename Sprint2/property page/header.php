@@ -16,6 +16,7 @@
 
             <script>
                 let selectedPropertyAddress;
+                let selectedRentAddress;
                 let propertyVisit;
 
                 function savePropertyAddress(address) {
@@ -30,6 +31,12 @@
                 function submitOffer(){
                   window.location.href = 'submitOffer.php?';
                 }
+
+                function saveRentAddress(address) {
+                    selectedRentAddress = address;
+                    window.location.href = 'rent.php?address=' + encodeURIComponent(address); //saves address and redorects to property.php
+                }
+
             </script>
         </head>
 
@@ -44,6 +51,8 @@
                       <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                           <li class="nav-item"><a class="nav-link" href="properties.php">Properties</a>
+                          </li>
+                          <li class="nav-item"><a class="nav-link" href="rents.php">For Rent</a>
                           </li>
                           <li class="nav-item"><a class="nav-link" href="brokers.php">Connect with a Broker</a>
                           </li>
