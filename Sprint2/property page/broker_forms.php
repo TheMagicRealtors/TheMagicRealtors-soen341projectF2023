@@ -5,7 +5,7 @@
 <div class="broker-form" style="display: none;">
     <!-- Create Broker Form -->
     <h2>Create Broker</h2>
-    <form method="POST" action="broker_create.php">
+    <form method="POST" action="broker_create.php" onsubmit="return validateCreateBrokerForm();">
         <div class="form-group">
             <label for="broker_name">Broker Name:</label>
             <input type="text" name="broker_name" class="form-control" required>
@@ -59,14 +59,93 @@
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Get the "Edit Brokers" button and the broker forms container
-    const editBrokersButton = document.getElementById('editBrokersButton');
-    const brokerForm = document.querySelector('.broker-form');
+    function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
 
-    // Toggle the visibility of broker forms when the button is clicked
-    editBrokersButton.addEventListener('click', function() {
-        brokerForm.style.display = (brokerForm.style.display === 'none') ? 'block' : 'none';
+    function validatePhone(phone) {
+        const phoneRegex = /^\+1 \d{3} \d{3} \d{4}$/;
+        return phoneRegex.test(phone);
+    }
+
+   
+    function validateBrokerForm(email, phone) {
+        if (!validateEmail(email)) {
+            alert('Please enter a valid email address.');
+            return false;
+        }
+
+        if (!validatePhone(phone)) {
+            alert('Please enter a valid phone number in the format +1 xxx xxx xxxx.');
+            return false;
+        }
+
+        // All validations passed
+        return true;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const editBrokersButton = document.getElementById('editBrokersButton');
+        const brokerForm = document.querySelector('.broker-form');
+
+        editBrokersButton.addEventListener('click', function() {
+            brokerForm.style.display = (brokerForm.style.display === 'none') ? 'block' : 'none';
+        });
+
+        const createBrokerForm = document.querySelector('form[action="broker_create.php"]');
+        createBrokerForm.addEventListener('submit', function(event) {
+            const brokerEmail = document.querySelector('input[name="broker_email"]');
+            const brokerPhone = document.querySelector('input[name="broker_phone"]');
+
+            if (!validateBrokerForm(brokerEmail.value, brokerPhone.value)) {
+                event.preventDefault();
+                if (!validateEmail(brokerEmail.value)) {
+                    brokerEmail.value = ''; // Clear only if email is invalid
+                }
+                if (!validatePhone(brokerPhone.value)) {
+                    brokerPhone.value = ''; // Clear only if phone is invalid
+                }
+            }
+        });
+
+        const updateBrokerForm = document.querySelector('form[action="broker_update.php"]');
+        updateBrokerForm.addEventListener('submit', function (event) {
+            const newEmail = updateBrokerForm.querySelector('input[name="broker_email"]');
+            const newPhone = updateBrokerForm.querySelector('input[name="broker_phone"]');
+            const brokerName = updateBrokerForm.querySelector('input[name="broker_name"]');
+
+            const isCreateOperation = false; // Set to false for update form
+
+            let isValid = true;
+
+            if (newEmail.value.trim() !== '' && !validateEmail(newEmail.value)) {
+                event.preventDefault();
+                isValid = false;
+                alert('Please enter a valid email address.');
+                newEmail.value = ''; // Clear only if email is invalid
+            }
+
+            if (newPhone.value.trim() !== '' && !validatePhone(newPhone.value)) {
+                event.preventDefault();
+                isValid = false;
+                alert('Please enter a valid phone number in the format +1 xxx xxx xxxx.');
+                newPhone.value = ''; // Clear only if phone is invalid
+            }
+
+        });
+       
+        const phoneInput = document.querySelector('input[name="broker_phone"]');
+        phoneInput.addEventListener('focus', function() {
+            if (phoneInput.value === '') {
+                phoneInput.value = '+1 ';
+            }
+        });
+
+        phoneInput.addEventListener('blur', function() {
+            if (phoneInput.value === '+1 ') {
+                phoneInput.value = '';
+            }
+        });
     });
-});
 </script>
