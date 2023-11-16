@@ -23,7 +23,7 @@
    
 <!-- Create Property Form -->
 <h1 class="display-4">Create Property</h1>
-    <form method="POST" action="property_create.php">
+    <form method="POST" action="property_create.php"  enctype="multipart/form-data">
 
         <div class="form-group">
             <label for="price">Price</label>
