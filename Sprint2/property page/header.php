@@ -60,8 +60,6 @@
                           </li>
                           <li class="nav-item"><a class="nav-link" href="logout.php">logout</a>
                           </li>
-                          <li class="nav-item"><a class="nav-link" href="property_forms.php">Edit Properties</a>
-                          </li>
                           <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#MyAccount" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             My Account</a>
@@ -70,7 +68,7 @@
                               <li><hr class="dropdown-divider"></li>
                               <li><a class="dropdown-item" href="create_account.php" style="text-align: center;">Sign Up</a></li>
                               <li><hr class="dropdown-divider"></li>
-                              <li><a class="dropdown-item" href="#" style="text-align: center;">My Favorites</a></li>
+                              <li><a class="dropdown-item" href="favorites.php" style="text-align: center;">My Favorites</a></li>
                             </ul>
                           </li>
                         </ul>

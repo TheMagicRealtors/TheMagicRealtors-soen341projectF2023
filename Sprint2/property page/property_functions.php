@@ -33,14 +33,14 @@ function createProperty($city, $district, $address, $house_type, $garage, $price
             return false; 
         }
     
-        $stmt = $pdo->prepare("INSERT INTO properties (city, district, address, house_type, garage, price, nb_bedrooms, nb_bathrooms, description, image_url) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?,?)");
+        $stmt = $pdo->prepare("INSERT INTO properties (city, district, address, house_type, garage, price, nb_bedrooms, nb_bathrooms, description, image_url) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
         return $stmt->execute([$city, $district, $address, $house_type, $garage, $price, $nb_bedrooms, $nb_bathrooms, $description, $image_url]);
     }
     
-function updateProperty($properties_id, $newPrice, $newDescription) {
+function updateProperty($properties_id, $newPrice, $newDescription, $newImage) {
     global $pdo;
-    $stmt = $pdo->prepare("UPDATE properties SET price = ?, description = ? WHERE properties_id = ?");
-    return $stmt->execute([$newPrice, $newDescription, $properties_id]);
+    $stmt = $pdo->prepare("UPDATE properties SET price = ?, description = ?, image_url = ? WHERE properties_id = ?");
+    return $stmt->execute([$newPrice, $newDescription, $properties_id, $newImage]);
 }
 function deleteProperty($properties_id) {
     global $pdo;

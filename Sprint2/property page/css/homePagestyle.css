@@ -18,3 +18,11 @@
         margin: 10px;
     }
 }
+.parent {
+    position: relative;
+    background-image: "property_images/homePageImage.jpg";
+    background-size: cover;
+    height: 500px;
+}.about-text {
+    position:absolute;
+}
