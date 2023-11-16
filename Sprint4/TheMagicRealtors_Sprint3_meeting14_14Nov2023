@@ -1,0 +1,33 @@
+Date and Time
+November 14 2023
+1:20pm to 2:10pm
+
+Venue
+Virtual meeting on Discord
+
+Requested by
+Christa Abou Arraje
+
+Meeting Attendees
+-Jenisha Sivalingam
+-Veronique Touma
+-Christa Abou Arraje
+
+Business from Last Meeting
+-Christa finished fixing the CSS of the CRUD on properties and the automated testing.
+
+Topic of the Meeting
+-Jenisha and Veronique encountered bugs in their properties codes after the most recent merge, so this meeting was organized to find the cause and a solution
+
+Tasks done during the meeting
+-Christa updated the other members what she had completed and what she will be working on next.
+-Christa, Jenisha and Veronique tried to debug the issues with the properties not displaying on the properties page
+-Christa noticed the error is due to the conflicts she resolved during her most recent merge, so she fixed the code and the problem was solved
+
+Task Updates
+-Christa will now start working on the favourites feature/page
+-Veronique is done with the part she was assigned
+-Jenisha is done with the part she was assigened
+
+Goals for Next Meeting
+-The team members should continue to work on their own individual parts and advance enough to be able to organize the remainder of the tasks during the lab session of Thursday.
