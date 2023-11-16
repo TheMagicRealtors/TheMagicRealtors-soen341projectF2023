@@ -56,8 +56,6 @@
                           </li>
                           <li class="nav-item"><a class="nav-link" href="brokers.php">Connect with a Broker</a>
                           </li>
-                          <li class="nav-item"><a class="nav-link" href="mortgageCalculator.php">Mortgage Calculator</a>
-                          </li>
                           <li class="nav-item"><a class="nav-link" href="logout.php">logout</a>
                           </li>
                           <li class="nav-item dropdown">
