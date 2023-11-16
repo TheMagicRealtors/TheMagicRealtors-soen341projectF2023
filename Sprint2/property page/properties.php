@@ -116,7 +116,7 @@
                 echo '<div class="card-body">';
                 echo '<h5 class="card-title">' . $row['address'] . '</h5>';
                 echo '<p class="card-text">' . $row['district'] . ', ' . $row['city'] . '</p>'; //change
-                echo '<p class="card-text">' . 'Price: ' . $row['price'] .'$' .'</p>'; //change
+                echo '<p class="card-text">' . 'Price: $' . $row['price']  .'</p>'; //change
                // echo '<a href="property.php" class="btn btn-outline-light" style="background-color: #000080;" onclick="savePropertyAddress(\'' . $row['address'] . '\')>Show More</a>';
                 echo '<button class="btn btn-outline-light" style="background-color: #000080;" onclick="savePropertyAddress(\'' . $row['address'] . '\')">Show More</button>';
                 echo '</div>';
