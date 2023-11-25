@@ -1,5 +1,7 @@
 <?php
+session_start();
     require 'header.php';
+
 ?>
 
 <style>
@@ -55,7 +57,11 @@
 
 <!-- "Manage Properties" Button -->
 <div class="container-fluid">
-     <a class="btn btn-primary float-end mt-3" id="managePropertiesButton" href="property_forms.php" style="background-color: #000080; ">Manage Properties</a>
+    <?php
+if((isset($_SESSION['user_id'])) &&((($_SESSION['user_type']) == 3)||(($_SESSION['user_type']) == 4)) ){
+     echo '<a class="btn btn-primary float-end mt-3" id="managePropertiesButton" href="property_forms.php" style="background-color: #000080; ">Manage Properties</a>';
+}
+?>
     <!--<button class="btn btn-primary mt-3" onclick="window.location.href='property_forms.php'" style="background-color: #000080; float: right;">Manage Properties</button>-->
 </div>
 
