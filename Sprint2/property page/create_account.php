@@ -95,8 +95,8 @@
             <label for=""><b>What type of user are you?</b></label><br><br>
              <input type="radio" name="user_type" value=1>Homebuyer 
              <input type="radio" name="user_type" value=2>Property Renter
-             <input type="radio" name="user_type" value=2>Broker
-             <input type="radio" name="user_type" value=2>System Administrator
+             <input type="radio" name="user_type" value=3>Broker
+             <input type="radio" name="user_type" value=4>System Administrator
             <br><br>
             <button type="submit" class="loginButton" name=submit style="background-color: #000080;color:white" >Create Account!</button><br>
             

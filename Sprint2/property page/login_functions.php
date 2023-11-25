@@ -36,6 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Password is correct
                 // You can set session variables and redirect the user to a secure page
                 session_start();
+                $_SESSION['user_type'] = $user['user_type'];
                 $_SESSION['id'] = $user['id'];
                 $_SESSION["logged_in"] = true;
                 $_SESSION['user_id'] = $user['id'];
