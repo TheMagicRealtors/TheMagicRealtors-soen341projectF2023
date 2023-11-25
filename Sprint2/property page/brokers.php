@@ -72,7 +72,7 @@ require 'loginRestrict.php';
 
 
     <?php 
-      if((isset($_SESSION['user_id'])) &&((($_SESSION['user_type']) == 3)||(($_SESSION['user_type']) == 4)) ){
+      if((isset($_SESSION['user_id'])) &&(($_SESSION['user_type']) == 4) ){
     include 'broker_forms.php'; 
       }
     ?>
