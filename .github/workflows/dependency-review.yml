@@ -24,7 +24,7 @@ runs-on: ubuntu-latest
       uses: sonarsource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_TOKEN: 91972f2963a339292c9597639e433a7211941a8f 
   dependency-review:
     runs-on: ubuntu-latest
     steps:
