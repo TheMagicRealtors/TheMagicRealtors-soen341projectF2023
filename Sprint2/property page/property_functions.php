@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 63e0bf8e5a334a24ef3d820ac7f00668e3e73e55
 <?php
 function pdo_connect_mysql() { 
     $DATABASE_HOST = 'localhost'; 
@@ -60,33 +57,30 @@ function getPropertyData($properties_id)
     $stmt->execute([$properties_id]);
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
-<<<<<<< HEAD
-function addToFavorites($userId, $propertyId) {
+
+// Add a property to a user's favorites
+function addToFavorites($user_id, $properties_id) {
     global $pdo;
+
     $stmt = $pdo->prepare("INSERT INTO favorites (user_id, properties_id) VALUES (?, ?)");
-    return $stmt->execute([$userId, $propertyId]);
+    return $stmt->execute([$user_id, $properties_id]);
 }
 
 
 // Remove a property from a user's favorites
-/*function removeFromFavorites($user_id, $property_id) {
+function removeFromFavorites($user_id, $properties_id) {
     global $pdo;
 
-    $stmt = $pdo->prepare("DELETE FROM favorites WHERE user_id = ? AND property_id = ?");
-    return $stmt->execute([$user_id, $property_id]);
+    $stmt = $pdo->prepare("DELETE FROM favorites WHERE user_id = ? AND properties_id = ?");
+    return $stmt->execute([$user_id, $properties_id]);
 }
 
-function checkFavorite($user_id, $property_id) {
+function checkFavorite($user_id, $properties_id) {
     global $pdo;
 
-    $stmt = $pdo->prepare("SELECT COUNT(*) FROM favorites WHERE user_id = ? AND property_id = ?");
-    $stmt->execute([$user_id, $property_id]);
+    $stmt = $pdo->prepare("SELECT COUNT(*) FROM favorites WHERE user_id = ? AND properties_id = ?");
+    $stmt->execute([$user_id, $properties_id]);
 
     return $stmt->fetchColumn() > 0;
 }
-
-*/
-=======
-
->>>>>>> 63e0bf8e5a334a24ef3d820ac7f00668e3e73e55
 ?>

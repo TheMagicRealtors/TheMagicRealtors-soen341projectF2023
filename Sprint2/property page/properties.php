@@ -89,31 +89,7 @@
  <link rel="stylesheet" href="css/bootstrap.min.css"> 
   <link rel="stylesheet" href="css/main.min.css">
   <title>The Magic Realtors</title>
-  <script>
-  function addToFavorites(propertyId) {
-    // Make an AJAX request to add the property to favorites
-    // You can use vanilla JavaScript or a library like jQuery
-    // Example using fetch:
-    fetch('addToFavorites.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ propertyId: propertyId }),
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert('Property added to favorites!');
-        } else {
-            alert('Failed to add property to favorites.');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-}
-</script>
+  
 </head>
         <h1 style="font-size: 72px; color: white;">................................................</h1>
     </div>
@@ -169,7 +145,7 @@
        <?php
         include 'property_functions.php';
         $conn = pdo_connect_mysql();
-
+        $user_id = $_SESSION['user_id'];
         // SQL query to retrieve property details
         $sql = "SELECT * FROM properties";
         $result = $conn->query($sql);
@@ -185,8 +161,8 @@
                 echo '<p class="card-text">' . 'Price: $' . $row['price']  .'</p>'; //change
                // echo '<a href="property.php" class="btn btn-outline-light" style="background-color: #000080;" onclick="savePropertyAddress(\'' . $row['address'] . '\')>Show More</a>';
                 echo '<button class="btn btn-outline-light" style="background-color: #000080;" onclick="savePropertyAddress(\'' . $row['address'] . '\')">Show More</button>';
-                echo '<button class="btn btn-danger float-end"  onclick="addToFavorites(' . $row['properties_id'] . ')">';
-        echo '<i class="bi bi-heart"></i></button>';
+                echo '<button class="btn btn-danger float-end"  onclick="toggleFavorite(' . $row['properties_id'] . ')">';
+                echo '<i class="bi bi-heart"></i></button>';
                 echo '</div>';
                 echo '</div>';
             }
@@ -197,7 +173,26 @@
         ?>
         
     </div>
-
+    <script>
+    function toggleFavorite(propertyId) {
+        function toggleFavorite(propertyId) {
+    // You can use AJAX to call addToFavorites.php and update the UI dynamically
+    fetch('addToFavorites.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'properties_id=' + propertyId,
+    })
+    .then(response => response.text())
+    .then(message => {
+        alert(message); // Display the message returned by addToFavorites.php
+        // Optionally, you can update the UI here based on the response
+        location.reload(); // Refresh the page to reflect changes
+    })
+    .catch(error => console.error('Error:', error));
+}
+</script>
     <script>
    document.addEventListener('DOMContentLoaded', function() {
     // Get the "Manage Properties" button and the property forms container

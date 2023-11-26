@@ -1,8 +1,5 @@
 <?php
-<<<<<<< HEAD
-=======
-// session_start();
->>>>>>> 63e0bf8e5a334a24ef3d820ac7f00668e3e73e55
+session_start();
 include 'property_functions.php';
 require 'header.php';
 
@@ -23,7 +20,7 @@ if($property['garage'] == 0){
 
     echo '<div>'; 
     echo '<img src="'.$property['image_url']. '" class="d-block w-100" alt="House Image">';
-    echo '<h1 style="color: dodgerblue;">' . $property['price'] . '$</h1>';
+    echo '<h1 style="color: dodgerblue;">$' . $property['price'] . '</h1>';
     echo '<h2>'. $property['house_type'] . '</h2>';
     echo '<h4>' . $property['address'] .', ' . $property['district'] . '</h4><br>';
     echo '<div style="background-color: rgb(236, 236, 236); padding: 30px;">';
@@ -41,17 +38,19 @@ if($property['garage'] == 0){
     echo '</table>';
     echo '</div>';
     echo '<div style="background-color: rgb(255, 255, 255); padding: 30px;">';
+    if((isset($_SESSION['user_id'])) &&((($_SESSION['user_type']) == 1)|| (($_SESSION['user_type']) == 2)||(($_SESSION['user_type']) == 3)||(($_SESSION['user_type']) == 4))){
     echo '<button class="btn btn-outline-light" style="background-color: #000080;" onclick="saveVisitAddress(\'' . $property['address'] . '\')">Book a Visit</button>';
-    // if($userType == '2'){
+    }
+    if((isset($_SESSION['user_id'])) &&((($_SESSION['user_type']) == 3)||(($_SESSION['user_type']) == 4)) ){
         echo '<button class="btn btn-outline-light" style="background-color: #000080;" onclick="submitOffer()">Make Offer</button>';
-    // }
+     }
 
     
     echo '</div>';
     echo '</div>';
 
-//     global $price;
-//    $price = . $property['price'] .;
+    global $price;
+   $price = $property['price'];
 
     
 ?>
@@ -74,14 +73,14 @@ if($property['garage'] == 0){
         }
 
         .loginForm {
-        position: absolute;
-        top: 50%;
-        left: 50%;
+        position: relative;
+        top: 150px;
+        left: 250px;
         transform: translate(-50%, -50%);
         /* margin: auto; */
-        width: 600px;
+        width: 500px;
         padding: 16px;
-        background-color: white;
+        background-color: rgb(236, 236, 236);
         color: black;
     }
 
@@ -94,12 +93,21 @@ if($property['garage'] == 0){
         width: 100%;
         opacity: 0.9;
     }
+    .mortgageButton {
+        background-color: #000080;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 40%;
+        height:50px;
+        opacity: 0.9;
+    }
     
     </style>
     <head>
     <link rel="stylesheet" type="text/css" href="myboringfilename.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
     </head>
 
 <body>
@@ -111,10 +119,11 @@ if($property['garage'] == 0){
     <br>
     
 
-    <form class="loginForm" method=POST>
+    <div>
+    <form class="loginForm" method=POST onsubmit="calculator(); return false;">
             <h1><b>Motgage Calculator</b></h1>
             <label for="rate"><b>Price</b></label><br>
-            <input type="text" placeholder="price" id='price' name="price" required><br>
+            <input type="text" placeholder="price" id='price' name="price" value = "<?php echo htmlspecialchars($price); ?>" required><br>
 
             <label for="rate"><b>Annual Interest Rate in Percentage</b></label><br>
             <input type="text" placeholder="Annual Rate" id='rate' name="rate" required><br>
@@ -122,32 +131,31 @@ if($property['garage'] == 0){
             <label for="down"><b>Down Payment</b></label><br>
             <input type="text" placeholder="Enter Amount" id='down' name="down" required><br>
 
-            <label for="down"><b>Mortgage Term</b></label><br>
-            <input type="text" placeholder="Enter Amount" id='down' name="years" required><br>
+            <label for="years"><b>Mortgage Term</b></label><br>
+            <input type="text" placeholder="Enter Amount" id='years' name="years" required><br><br>
 
-            <button type="submit" class="loginButton" >Calculate</button>
-            <p id="result":>Result: </p>
-            <p class="error-message"><?php echo $errorMessage; ?></p>
+            <button type="submit" class="mortgageButton" onclick="calculator()" >Calculate</button>
      </form>
+     <h1 id="result" class="result"></h1>
+</div>
      
      <script>
-        // let rate;
-        // let down;
-        let price;
-        // let motgage;
-       // value="//<?php //echo  . $property['price'] . ; ?>
+        function calculator(){
+            var rate = (parseFloat(document.getElementById('rate').value)/100)/12;
+            console.log(rate);
+            var price = parseFloat(document.getElementById('price').value);
+            console.log(price);
+            var principal = price - parseFloat(document.getElementById('down').value);
+            console.log(principal);
 
+            var term =parseFloat(document.getElementById('years').value) * 12;
+            console.log(term);
+            var mortgage = principal * ((rate * Math.pow((1+ rate), term))/(Math.pow((1+ rate), term) -1));
 
-        // function calculator(){
-        //     var rate = parseFloat(document.getElementById('rate').value)/12;
-        //     var price = parseFloat(document.getElementById('price').value);
-        //     var principal = price - parseFloat(document.getElementById('down').value);
-        //     var term =parseFloat(document.getElementById('years').value);
-        //     var mortgage = principal * ((rate * Math.pow((1+ rate), term))/(Math.pow((1+ rate), term) -1));
+            document.getElementById("result").innerText = 'Monthly Payment: $' + mortgage.toFixed(2);
+            console.log(mortgage);
 
-        //     document.getElementById('result').textContent = 'Result: ' + mortgage;
-
-        // }
+        }
 
     </script>
    
