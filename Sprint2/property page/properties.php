@@ -161,6 +161,7 @@
 <div>
     <p style="font-size:50px; color:black; font-family: Arial;" class="p-2 availableProperties">Available Properties <br> 
     <button href="sort_newest.php" style=" background-color:#000080" class="btn btn-primary ml-2"><i class="bi bi-arrow-down-up"></i>&nbsp;&nbsp;Sort by Newest</button></p> 
+    
 </div>
 
     <!-- Properties -->

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 63e0bf8e5a334a24ef3d820ac7f00668e3e73e55
 <?php
 function pdo_connect_mysql() { 
     $DATABASE_HOST = 'localhost'; 
@@ -57,6 +60,7 @@ function getPropertyData($properties_id)
     $stmt->execute([$properties_id]);
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
+<<<<<<< HEAD
 function addToFavorites($userId, $propertyId) {
     global $pdo;
     $stmt = $pdo->prepare("INSERT INTO favorites (user_id, properties_id) VALUES (?, ?)");
@@ -82,4 +86,7 @@ function checkFavorite($user_id, $property_id) {
 }
 
 */
+=======
+
+>>>>>>> 63e0bf8e5a334a24ef3d820ac7f00668e3e73e55
 ?>
