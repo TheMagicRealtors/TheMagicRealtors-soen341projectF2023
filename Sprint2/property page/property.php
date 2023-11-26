@@ -1,6 +1,4 @@
 <?php
-// session_start();
-
 include 'property_functions.php';
 require 'loginRestrict.php';
 require 'header.php';
@@ -70,6 +68,7 @@ if($property['garage'] == 0){
     <head>
     <link rel="stylesheet" type="text/css" href="myboringfilename.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
     </head>
 
 <body>

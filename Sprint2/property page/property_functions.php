@@ -1,4 +1,4 @@
-testingMain
+
 <?php
 function pdo_connect_mysql() { 
     $DATABASE_HOST = 'localhost'; 
@@ -26,7 +26,7 @@ function getPropertyFromAddress($address){
     $statement->execute([$address]);
     return $statement->fetch(PDO::FETCH_ASSOC);
 }
-function createProperty($city, $district, $address, $house_type, $garage, $price, $nb_bedrooms, $nb_bathrooms, $description, $image_url) {
+function createProperty($city, $district, $address, $house_type, $garage, $price, $nb_bedrooms, $nb_bathrooms, $description, $image_url = 'property_images/defaultHome.png') {
     global $pdo;
 
         // Check if description is not null or empty before inserting
@@ -38,10 +38,10 @@ function createProperty($city, $district, $address, $house_type, $garage, $price
         return $stmt->execute([$city, $district, $address, $house_type, $garage, $price, $nb_bedrooms, $nb_bathrooms, $description, $image_url]);
     }
     
-function updateProperty($properties_id, $newPrice, $newDescription, $newImage) {
+function updateProperty($properties_id, $newPrice, $newDescription /*, $newImage*/) {
     global $pdo;
-    $stmt = $pdo->prepare("UPDATE properties SET price = ?, description = ?, image_url = ? WHERE properties_id = ?");
-    return $stmt->execute([$newPrice, $newDescription, $properties_id, $newImage]);
+    $stmt = $pdo->prepare("UPDATE properties SET price = ?, description = ?/*, image_url = ?*/ WHERE properties_id = ?");
+return $stmt->execute([$newPrice, $newDescription, $properties_id /*, $newImage*/]);
 }
 function deleteProperty($properties_id) {
     global $pdo;
@@ -57,3 +57,29 @@ function getPropertyData($properties_id)
     $stmt->execute([$properties_id]);
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
+function addToFavorites($userId, $propertyId) {
+    global $pdo;
+    $stmt = $pdo->prepare("INSERT INTO favorites (user_id, properties_id) VALUES (?, ?)");
+    return $stmt->execute([$userId, $propertyId]);
+}
+
+
+// Remove a property from a user's favorites
+/*function removeFromFavorites($user_id, $property_id) {
+    global $pdo;
+
+    $stmt = $pdo->prepare("DELETE FROM favorites WHERE user_id = ? AND property_id = ?");
+    return $stmt->execute([$user_id, $property_id]);
+}
+
+function checkFavorite($user_id, $property_id) {
+    global $pdo;
+
+    $stmt = $pdo->prepare("SELECT COUNT(*) FROM favorites WHERE user_id = ? AND property_id = ?");
+    $stmt->execute([$user_id, $property_id]);
+
+    return $stmt->fetchColumn() > 0;
+}
+
+*/
+?>

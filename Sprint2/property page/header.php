@@ -30,6 +30,7 @@
                 function submitOffer(){
                   window.location.href = 'submitOffer.php?';
                 }
+                
             </script>
         </head>
 

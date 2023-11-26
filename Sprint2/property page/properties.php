@@ -1,9 +1,48 @@
 <?php
-    require 'loginRestrict.php';
     require 'header.php';
 ?>
-
+<head>
 <style>
+    .property-card {
+        margin:15px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    @media (min-width: 576px) {
+        .property-card {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        
+    }
+
+    @media (min-width: 768px) {
+        .property-card {
+            flex: 0 0 48%;
+            max-width: 48%;
+        }
+    }
+    @media (min-width:1200px) {
+        .property-card {
+            flex: 0 0 31%;
+            max-width: 31%;
+        }
+    }
+        
+        @media (max-width: 575px) {
+        .availableProperties {
+            white-space: nowrap;
+            font-size: 16px;
+
+        }
+    }
+        
+
+    
+       
+    
 .centered-form {
     display: flex;
     align-items: center;
@@ -50,7 +89,32 @@
  <link rel="stylesheet" href="css/bootstrap.min.css"> 
   <link rel="stylesheet" href="css/main.min.css">
   <title>The Magic Realtors</title>
-<div>
+  <script>
+  function addToFavorites(propertyId) {
+    // Make an AJAX request to add the property to favorites
+    // You can use vanilla JavaScript or a library like jQuery
+    // Example using fetch:
+    fetch('addToFavorites.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ propertyId: propertyId }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Property added to favorites!');
+        } else {
+            alert('Failed to add property to favorites.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+</script>
+</head>
         <h1 style="font-size: 72px; color: white;">................................................</h1>
     </div>
 
@@ -90,18 +154,17 @@
 </div>
 <!-- "Manage Properties" Button -->
 <div class="container-fluid">
-     <a class="btn btn-primary float-end mt-3" id="managePropertiesButton" href="property_forms.php" style="background-color: #000080; ">Manage Properties</a>
+     <a class="btn btn-primary float-end mt-3 mr-2" id="managePropertiesButton" href="property_forms.php" style="background-color: #000080; ">Manage Properties</a>
     <!--<button class="btn btn-primary mt-3" onclick="window.location.href='property_forms.php'" style="background-color: #000080; float: right;">Manage Properties</button>-->
 </div>
 
 <div>
-    <p style="font-size:50px; color:black;">Available Properties</p>
+    <p style="font-size:50px; color:black; font-family: Arial;" class="p-2 availableProperties">Available Properties <br> 
+    <button href="sort_newest.php" style=" background-color:#000080" class="btn btn-primary ml-2"><i class="bi bi-arrow-down-up"></i>&nbsp;&nbsp;Sort by Newest</button></p> 
 </div>
-
 
     <!-- Properties -->
     <div class="container-fluid">
-       
        <?php
         include 'property_functions.php';
         $conn = pdo_connect_mysql();
@@ -113,14 +176,16 @@
         if ($result->rowCount() > 0) {
             echo '<div class="row">'; //add this
             while ($row = $result->fetch()) {
-                echo '<div class="card col-lg-4 col-md-6 col-sm-12">';
-                echo '<img src="' . $row['image_url'] . '" class="card-img-top" alt="...">';
+                echo '<div class="property-card mx-2 card mb-3">';
+                echo '<img src="' . $row['image_url'] . '" class="card-img-top mt-2" alt="..." style="height:80%;">';
                 echo '<div class="card-body">';
                 echo '<h5 class="card-title">' . $row['address'] . '</h5>';
-                echo '<p class="card-text">' . $row['district'] . ', ' . $row['city'] . '</p>'; //change
-                echo '<p class="card-text">' . 'Price: ' . $row['price'] .'$' .'</p>'; //change
+                echo '<p class="card-text" style="font-weight: bold; font-style: italic;">' . $row['district'] . ', ' . $row['city'] . '</p>'; //change
+                echo '<p class="card-text">' . 'Price: $' . $row['price']  .'</p>'; //change
                // echo '<a href="property.php" class="btn btn-outline-light" style="background-color: #000080;" onclick="savePropertyAddress(\'' . $row['address'] . '\')>Show More</a>';
                 echo '<button class="btn btn-outline-light" style="background-color: #000080;" onclick="savePropertyAddress(\'' . $row['address'] . '\')">Show More</button>';
+                echo '<button class="btn btn-danger float-end"  onclick="addToFavorites(' . $row['properties_id'] . ')">';
+        echo '<i class="bi bi-heart"></i></button>';
                 echo '</div>';
                 echo '</div>';
             }
@@ -128,8 +193,6 @@
         } else {
             echo 'No properties found.';
         }
-        // Close the database connection
-        //$conn->close();
         ?>
         
     </div>
@@ -151,6 +214,7 @@
 });
 
 </script>
+
 
 
     

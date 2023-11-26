@@ -1,20 +1,35 @@
-<<?php
-    require 'header.php';
-
-?>
-<div class="container-fluid mt-4">
-                    <!--Row 1-->
-                    <div class="row">
-                        <!--Row 1 Column 1-->
-                        <div class="card col-lg-4 col-md-6 col-sm-12">
-                            <img src="property_images/property_1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Property 1</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="property.php" class="btn btn-outline-light" style="background-color: #000080;">Show More</a>
-        
-                            </div>
-                        </div>
 <?php
-  include 'footer.php';
+session_start();
+require 'header.php';
+require_once 'db_connect.php'; // Adjust the file name as per your database connection file
+
+if (isset($_SESSION['user_id'])) {
+    $user_id = $_SESSION['user_id'];
+
+    // Perform a database query to get favorite properties for the user
+    // Adjust this based on your actual database structure and connection
+    $stmt = $pdo->prepare("
+        SELECT p.address
+        FROM favorites f
+        JOIN properties p ON f.properties_id = p.properties_id
+        WHERE f.user_id = ?
+    ");
+    $stmt->execute([$user_id]);
+    $favorites = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    if (count($favorites) > 0) {
+        echo '<h2>Your Favorite Properties:</h2>';
+        echo '<ul>';
+        foreach ($favorites as $favorite) {
+            echo '<li>' . htmlspecialchars($favorite['address']) . '</li>';
+        }
+        echo '</ul>';
+    } else {
+        echo '<p>No favorite properties yet.</p>';
+    }
+} else {
+    echo '<p>Please log in to view your favorite properties.</p>';
+}
+
+include 'footer.php';
 ?>

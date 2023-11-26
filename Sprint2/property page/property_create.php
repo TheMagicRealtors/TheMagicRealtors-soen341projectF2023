@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["createProperty"])) {
     $nb_bedrooms=$_POST['nb_bedrooms'];
     $nb_bathrooms=$_POST['nb_bathrooms'];
     $description=$_POST['description'];
-    $image_url=$_POST['image_url'];
+    $image_url = isset($_POST['image_url']) ? $_POST['image_url'] : 'property_images/defaultHome.png';
 
     echo "Description: " . $description;
 
