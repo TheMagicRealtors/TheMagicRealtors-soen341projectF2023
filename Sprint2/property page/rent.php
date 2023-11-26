@@ -1,5 +1,5 @@
 <?php
-// session_start();
+ session_start();
 
 include 'rent_functions.php';
 require 'header.php';
@@ -38,10 +38,12 @@ if($rent['garage'] == 0){
     echo '</table>';
     echo '</div>';
     echo '<div style="background-color: rgb(255, 255, 255); padding: 30px;">';
+    if((isset($_SESSION['user_id'])) &&((($_SESSION['user_type']) == 1)||(($_SESSION['user_type']) == 2)||(($_SESSION['user_type']) == 3)||(($_SESSION['user_type']) == 4))){
     echo '<button class="btn btn-outline-light" style="background-color: #000080;" onclick="saveVisitAddress(\'' . $rent['address'] . '\')">Book a Visit</button>';
-    // if($userType == '2'){
-        echo '<button class="btn btn-outline-light" style="background-color: #000080;" onclick="submitOffer()">Make Offer</button>';
-    // }
+    }
+    if((isset($_SESSION['user_id'])) &&((($_SESSION['user_type']) == 3)||(($_SESSION['user_type']) == 4)) ){
+    echo '<button class="btn btn-outline-light" style="background-color: #000080;" onclick="submitOffer()">Make Offer</button>';
+    }
     
     echo '</div>';
     echo '</div>';
