@@ -137,10 +137,12 @@
   </div>
 
 <div>
-    <p style="font-size:50px; color:black;" class="p-2">Available Properties <br> 
-    <button> <a href="sort_newest.php" class="btn btn-primary ml-2" style="background-color:#000080"><i class="bi bi-arrow-down-up"></i>&nbsp;&nbsp;Sort by Newest</a>
+    <p style="font-size:50px; color:black;" class="p-2">Available Properties </p><br>
     
+    <button> <a href="sort_newest.php" class="btn btn-primary ml-2" style="background-color:#000080;"><i class="bi bi-arrow-down-up"></i>&nbsp;&nbsp;Sort by Newest</a>
+
 </button> 
+    
 </div>
 
     <!-- Properties -->
@@ -162,7 +164,7 @@
 
         if ($stmt->rowCount() > 0) {
             while ($row = $stmt->fetch()) {
-                echo '<div class="card property-card mx-2 card mb-3">';
+                echo '<div class="card property-card mx-2 mb-3">';
                 echo '<img src="' . $row['image_url'] . '" class="card-img-top mt-2" alt="..." style="height:80%;">';
                 echo '<div class="card-body">';
                 echo '<h5 class="card-title">' . $row['address'] . '</h5>';

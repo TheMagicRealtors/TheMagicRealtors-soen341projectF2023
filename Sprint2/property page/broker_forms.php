@@ -1,7 +1,7 @@
 <div class="text-center mt-3">
     <button id="editBrokersButton" class="btn btn-primary" style="background-color: #000080;">Edit Brokers</button>
 </div>
-
+<div class="container">
 <div class="broker-form" style="display: none;">
     <!-- Create Broker Form -->
     <h2>Create Broker</h2>
@@ -57,6 +57,7 @@
         <button type="submit" name="deleteBroker" class="btn btn-danger" style="background-color: #c10000;">Delete</button>
     </form>
 </div>
+</div>
 
 <script>
     function validateEmail(email) {
@@ -84,6 +85,8 @@
         // All validations passed
         return true;
     }
+
+
 
     document.addEventListener('DOMContentLoaded', function() {
         const editBrokersButton = document.getElementById('editBrokersButton');
