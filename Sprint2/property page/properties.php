@@ -108,57 +108,75 @@
 
     <!-- Properties -->
     <div class="container-fluid">
-       <?php
+    <div class="row">
+        <?php
         include 'property_functions.php';
         $conn = pdo_connect_mysql();
 
-        // SQL query to retrieve property details
-        $sql = "SELECT * FROM properties";
-        $result = $conn->query($sql);
+        // Assuming $user_id is set somewhere in your code
+        $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
+            // SQL query to retrieve property details and check favorite status
+            $sql = "SELECT p.*, f.user_id AS favorite_user_id
+                    FROM properties p
+                    LEFT JOIN favorites f ON p.properties_id = f.property_id AND f.user_id = :user_id";
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':user_id', $user_id);
+            $stmt->execute(); 
 
-        if ($result->rowCount() > 0) {
-            echo '<div class="row">'; //add this
-            while ($row = $result->fetch()) {
+        if ($stmt->rowCount() > 0) {
+            while ($row = $stmt->fetch()) {
                 echo '<div class="card col-lg-4 col-md-6 col-sm-12">';
                 echo '<img src="' . $row['image_url'] . '" class="card-img-top" alt="...">';
                 echo '<div class="card-body">';
                 echo '<h5 class="card-title">' . $row['address'] . '</h5>';
-                echo '<p class="card-text">' . $row['district'] . ', ' . $row['city'] . '</p>'; //change
-                echo '<p class="card-text">' . 'Price: $' . $row['price']  .'</p>'; //change
-               // echo '<a href="property.php" class="btn btn-outline-light" style="background-color: #000080;" onclick="savePropertyAddress(\'' . $row['address'] . '\')>Show More</a>';
+                echo '<p class="card-text">' . $row['district'] . ', ' . $row['city'] . '</p>';
+                echo '<p class="card-text">' . 'Price: $' . $row['price']  .'</p>';
+                
+                $isFavorite = !empty($row['favorite_user_id']);
+                $heartColor = $isFavorite ? 'red' : 'black';
+
+                echo '<span class="favorite-icon" data-property-id="' . $row['properties_id'] . '" style="color: ' . $heartColor . '; float: right; cursor: pointer; font-size: 30px;" onclick="toggleFavorite(' . $row['properties_id'] . ')">&#x2661;</span>';
                 echo '<button class="btn btn-outline-light" style="background-color: #000080;" onclick="savePropertyAddress(\'' . $row['address'] . '\')">Show More</button>';
                 echo '</div>';
                 echo '</div>';
             }
-            echo '</div>'; //add this
         } else {
             echo 'No properties found.';
         }
         ?>
-        
     </div>
+</div>
 
-    <script>
-   document.addEventListener('DOMContentLoaded', function() {
-    // Get the "Manage Properties" button and the property forms container
-    const managePropertiesButton = document.getElementById('managePropertiesButton');
-    const propertyForm = document.querySelector('.property-form');
-
-    // Toggle the visibility of property forms when the button is clicked
-    managePropertiesButton.addEventListener('click', function() {
-        if (propertyForm.style.display === 'block') {
-            propertyForm.style.display = 'none';
-        } else {
-            propertyForm.style.display = 'block';
-        }
-    });
-});
+<script>
+    function toggleFavorite(propertyId) {
+    // Check if the user is logged in
+    <?php if(isset($_SESSION['user_id'])) { ?>
+        // You can use AJAX to call addToFavorites.php and update the UI dynamically
+        // For simplicity, let's assume you have a working addToFavorites.php
+        // You can implement this function using JavaScript fetch or jQuery.ajax
+        fetch('addToFavorites.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: 'property_id=' + propertyId,
+        })
+        .then(response => response.text())
+        .then(message => {
+            alert(message); // Display the message returned by addToFavorites.php
+            // Optionally, you can update the UI here based on the response
+            location.reload(); // Refresh the page to reflect changes
+        })
+        .catch(error => console.error('Error:', error));
+    <?php } else { ?>
+        // Redirect to the login page if the user is not logged in
+        window.location.href = 'login.php';
+    <?php } ?>
+}
 
 </script>
 
 
-    
-    
 <?php
 include 'footer.php';
 ?>

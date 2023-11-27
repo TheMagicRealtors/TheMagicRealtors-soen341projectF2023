@@ -54,7 +54,13 @@
                           </li>
                           <li class="nav-item"><a class="nav-link" href="rents.php">For Rent</a>
                           </li>
-                          <li class="nav-item"><a class="nav-link" href="brokers.php">Connect with a Broker</a>
+                          <?php
+                        // Check if the user is logged in and has the required user type
+                        if(isset($_SESSION['user_id']) && (($_SESSION['user_type']) == 1 || ($_SESSION['user_type']) == 2)) {
+                            // Display the "My Favorites" link
+                            echo '<li class="nav-item"><a class="nav-link" href="favorites.php">My Favorites</a></li>';
+                        }
+                        ?>                          <li class="nav-item"><a class="nav-link" href="brokers.php">Connect with a Broker</a>
                           </li>
                           <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a>
                           </li>
