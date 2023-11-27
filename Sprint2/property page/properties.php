@@ -5,7 +5,8 @@
 ?>
 
 <style>
-     .property-card {
+
+.property-card {
         margin:15px;
         flex: 0 0 100%;
         max-width: 100%;
@@ -137,12 +138,13 @@
   </div>
 
 <div>
+
     <p style="font-size:50px; color:black;" class="p-2">Available Properties </p><br>
     
     <button> <a href="sort_newest.php" class="btn btn-primary ml-2" style="background-color:#000080;"><i class="bi bi-arrow-down-up"></i>&nbsp;&nbsp;Sort by Newest</a>
 
 </button> 
-    
+ 
 </div>
 
     <!-- Properties -->
