@@ -5,6 +5,41 @@
 ?>
 
 <style>
+.property-card {
+        margin:15px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    @media (min-width: 576px) {
+        .property-card {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        
+    }
+
+    @media (min-width: 768px) {
+        .property-card {
+            flex: 0 0 48%;
+            max-width: 48%;
+        }
+    }
+    @media (min-width:1200px) {
+        .property-card {
+            flex: 0 0 31%;
+            max-width: 31%;
+        }
+    }
+        
+        @media (max-width: 575px) {
+        .availableProperties {
+            white-space: nowrap;
+            font-size: 16px;
+
+        }
+    }
 .centered-form {
     display: flex;
     align-items: center;
@@ -102,8 +137,8 @@
   </div>
 
 <div>
-    <p style="font-size:50px; color:black;">Available Properties <br> 
-    <a href="sort_newest.php" style="font-size: 25px;">Sort by Newest</a></p> 
+    <p style="font-size:50px; color:black;">Available Properties</p> <br> 
+    <button> <a href="sort_newest.php" class="btn btn-primary ml-2" style="background-color:#000080"><i class="bi bi-arrow-down-up"></i>&nbsp;&nbsp;Sort by Newest</a>
 </div>
 
     <!-- Properties -->
@@ -125,8 +160,8 @@
 
         if ($stmt->rowCount() > 0) {
             while ($row = $stmt->fetch()) {
-                echo '<div class="card col-lg-4 col-md-6 col-sm-12">';
-                echo '<img src="' . $row['image_url'] . '" class="card-img-top" alt="...">';
+                echo '<div class="card property-card mx-2 mb-3">';
+                echo '<img src="' . $row['image_url'] . '" class="card-img-top mt-2" alt="..." style="height:80%;">';
                 echo '<div class="card-body">';
                 echo '<h5 class="card-title">' . $row['address'] . '</h5>';
                 echo '<p class="card-text">' . $row['district'] . ', ' . $row['city'] . '</p>';
