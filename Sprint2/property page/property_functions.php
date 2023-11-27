@@ -37,10 +37,10 @@ function createProperty($city, $district, $address, $house_type, $garage, $price
         return $stmt->execute([$city, $district, $address, $house_type, $garage, $price, $nb_bedrooms, $nb_bathrooms, $description, $image_url]);
     }
     
-function updateProperty($properties_id, $newPrice, $newDescription, $newImage) {
+function updateProperty($properties_id, $newPrice, $newDescription) {
     global $pdo;
-    $stmt = $pdo->prepare("UPDATE properties SET price = ?, description = ?, image_url = ? WHERE properties_id = ?");
-    return $stmt->execute([$newPrice, $newDescription, $properties_id, $newImage]);
+    $stmt = $pdo->prepare("UPDATE properties SET price = ?, description = ? WHERE properties_id = ?");
+    return $stmt->execute([$newPrice, $newDescription, $properties_id]);
 }
 function deleteProperty($properties_id) {
     global $pdo;
