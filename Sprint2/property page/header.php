@@ -31,16 +31,12 @@
                 function submitOffer(){
                   window.location.href = 'submitOffer.php?';
                 }
-<<<<<<< HEAD
-                
-=======
 
                 function saveRentAddress(address) {
                     selectedRentAddress = address;
                     window.location.href = 'rent.php?address=' + encodeURIComponent(address); //saves address and redorects to property.php
                 }
 
->>>>>>> 63e0bf8e5a334a24ef3d820ac7f00668e3e73e55
             </script>
         </head>
 
@@ -58,11 +54,15 @@
                           </li>
                           <li class="nav-item"><a class="nav-link" href="rents.php">For Rent</a>
                           </li>
-                          <li class="nav-item"><a class="nav-link" href="brokers.php">Connect with a Broker</a>
+                          <?php
+                        // Check if the user is logged in and has the required user type
+                        if(isset($_SESSION['user_id']) && (($_SESSION['user_type']) == 1 || ($_SESSION['user_type']) == 2)) {
+                            // Display the "My Favorites" link
+                            echo '<li class="nav-item"><a class="nav-link" href="favorites.php">My Favorites</a></li>';
+                        }
+                        ?>                          <li class="nav-item"><a class="nav-link" href="brokers.php">Connect with a Broker</a>
                           </li>
-                          <li class="nav-item"><a class="nav-link" href="mortgageCalculator.php">Mortgage Calculator</a>
-                          </li>
-                          <li class="nav-item"><a class="nav-link" href="logout.php">logout</a>
+                          <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a>
                           </li>
                           <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#MyAccount" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

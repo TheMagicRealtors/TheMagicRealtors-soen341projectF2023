@@ -1,7 +1,8 @@
 <?php
+session_start();
     require 'header.php';
 ?>
-<head>
+
 <style>
     .property-card {
         margin:15px;
@@ -90,7 +91,7 @@
   <link rel="stylesheet" href="css/main.min.css">
   <title>The Magic Realtors</title>
   
-</head>
+
         <h1 style="font-size: 72px; color: white;">................................................</h1>
     </div>
 
@@ -129,10 +130,15 @@
     </form> 
 </div>
 <!-- "Manage Properties" Button -->
-<div class="container-fluid">
-     <a class="btn btn-primary float-end mt-3 mr-2" id="managePropertiesButton" href="property_forms.php" style="background-color: #000080; ">Manage Properties</a>
-    <!--<button class="btn btn-primary mt-3" onclick="window.location.href='property_forms.php'" style="background-color: #000080; float: right;">Manage Properties</button>-->
-</div>
+
+
+<?php
+
+  if((isset($_SESSION['user_id'])) &&((($_SESSION['user_type']) == 3)||(($_SESSION['user_type']) == 4)) ){
+    echo '<a class="btn btn-primary float-end mt-3 mr-2" id="managePropertiesButton" href="property_forms.php" style="background-color: #000080; ">Manage Properties</a>';
+  }
+  ?>
+  </div>
 
 <div>
     <p style="font-size:50px; color:black; font-family: Arial;" class="p-2 availableProperties">Available Properties <br> 
@@ -142,17 +148,22 @@
 
     <!-- Properties -->
     <div class="container-fluid">
+    <div class="row">
        <?php
         include 'property_functions.php';
         $conn = pdo_connect_mysql();
-        $user_id = $_SESSION['user_id'];
+        $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
         // SQL query to retrieve property details
-        $sql = "SELECT * FROM properties";
-        $result = $conn->query($sql);
+        $sql = "SELECT p.*, f.user_id AS favorite_user_id
+        FROM properties p
+        LEFT JOIN favorites f ON p.properties_id = f.property_id AND f.user_id = :user_id";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':user_id', $user_id);
+        $stmt->execute();
 
-        if ($result->rowCount() > 0) {
-            echo '<div class="row">'; //add this
-            while ($row = $result->fetch()) {
+        if ($stmt->rowCount() > 0) {
+           
+            while ($row = $stmt->fetch()) {
                 echo '<div class="property-card mx-2 card mb-3">';
                 echo '<img src="' . $row['image_url'] . '" class="card-img-top mt-2" alt="..." style="height:80%;">';
                 echo '<div class="card-body">';
@@ -160,9 +171,11 @@
                 echo '<p class="card-text" style="font-weight: bold; font-style: italic;">' . $row['district'] . ', ' . $row['city'] . '</p>'; //change
                 echo '<p class="card-text">' . 'Price: $' . $row['price']  .'</p>'; //change
                // echo '<a href="property.php" class="btn btn-outline-light" style="background-color: #000080;" onclick="savePropertyAddress(\'' . $row['address'] . '\')>Show More</a>';
+
+                $isFavorite = !empty($row['favorite_user_id']);
+                $heartColor = $isFavorite ? 'red' : 'black';
+                echo '<span class="favorite-icon" data-property-id="' . $row['properties_id'] . '" style="color: ' . $heartColor . '; float: right; cursor: pointer; font-size: 30px;" onclick="toggleFavorite(' . $row['properties_id'] . ')">&#x2661;</span>';
                 echo '<button class="btn btn-outline-light" style="background-color: #000080;" onclick="savePropertyAddress(\'' . $row['address'] . '\')">Show More</button>';
-                echo '<button class="btn btn-danger float-end"  onclick="toggleFavorite(' . $row['properties_id'] . ')">';
-                echo '<i class="bi bi-heart"></i></button>';
                 echo '</div>';
                 echo '</div>';
             }
@@ -175,41 +188,33 @@
     </div>
     <script>
     function toggleFavorite(propertyId) {
-        function toggleFavorite(propertyId) {
-    // You can use AJAX to call addToFavorites.php and update the UI dynamically
-    fetch('addToFavorites.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: 'properties_id=' + propertyId,
-    })
-    .then(response => response.text())
-    .then(message => {
-        alert(message); // Display the message returned by addToFavorites.php
-        // Optionally, you can update the UI here based on the response
-        location.reload(); // Refresh the page to reflect changes
-    })
-    .catch(error => console.error('Error:', error));
+    // Check if the user is logged in
+    <?php if(isset($_SESSION['user_id'])) { ?>
+        // You can use AJAX to call addToFavorites.php and update the UI dynamically
+        // For simplicity, let's assume you have a working addToFavorites.php
+        // You can implement this function using JavaScript fetch or jQuery.ajax
+        fetch('addToFavorites.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: 'property_id=' + propertyId,
+        })
+        .then(response => response.text())
+        .then(message => {
+            alert(message); // Display the message returned by addToFavorites.php
+            // Optionally, you can update the UI here based on the response
+            location.reload(); // Refresh the page to reflect changes
+        })
+        .catch(error => console.error('Error:', error));
+    <?php } else { ?>
+        // Redirect to the login page if the user is not logged in
+        window.location.href = 'login.php';
+    <?php } ?>
 }
-</script>
-    <script>
-   document.addEventListener('DOMContentLoaded', function() {
-    // Get the "Manage Properties" button and the property forms container
-    const managePropertiesButton = document.getElementById('managePropertiesButton');
-    const propertyForm = document.querySelector('.property-form');
-
-    // Toggle the visibility of property forms when the button is clicked
-    managePropertiesButton.addEventListener('click', function() {
-        if (propertyForm.style.display === 'block') {
-            propertyForm.style.display = 'none';
-        } else {
-            propertyForm.style.display = 'block';
-        }
-    });
-});
 
 </script>
+
 
 
 
