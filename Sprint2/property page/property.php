@@ -121,7 +121,7 @@ if($property['garage'] == 0){
 
     <div>
     <form class="loginForm" method=POST onsubmit="calculator(); return false;">
-            <h1><b>Motgage Calculator</b></h1>
+            <h1><b>Mortgage Calculator</b></h1>
             <label for="rate"><b>Price</b></label><br>
             <input type="text" placeholder="price" id='price' name="price" value = "<?php echo htmlspecialchars($price); ?>" required><br>
 
