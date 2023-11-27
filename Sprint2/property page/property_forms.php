@@ -87,10 +87,7 @@
             <label for="description">Description</label>
             <input type="text" name="description" class="form-control">
         </div> <br>
-        <div class="input-group mb-3">
-  <label class="input-group-text" for="image_url">Upload Image</label>
-  <input type="file" class="form-control" name="image_url">
-</div>
+       
 <br>
 
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
