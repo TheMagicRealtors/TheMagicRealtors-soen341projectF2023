@@ -57,4 +57,31 @@ function getPropertyData($properties_id)
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
+// Add a property to a user's favorites
+function addToFavorites($user_id, $property_id) {
+    global $pdo;
+
+    $stmt = $pdo->prepare("INSERT INTO favorites (user_id, property_id) VALUES (?, ?)");
+    return $stmt->execute([$user_id, $property_id]);
+}
+
+
+// Remove a property from a user's favorites
+function removeFromFavorites($user_id, $property_id) {
+    global $pdo;
+
+    $stmt = $pdo->prepare("DELETE FROM favorites WHERE user_id = ? AND property_id = ?");
+    return $stmt->execute([$user_id, $property_id]);
+}
+
+function checkFavorite($user_id, $property_id) {
+    global $pdo;
+
+    $stmt = $pdo->prepare("SELECT COUNT(*) FROM favorites WHERE user_id = ? AND property_id = ?");
+    $stmt->execute([$user_id, $property_id]);
+
+    return $stmt->fetchColumn() > 0;
+}
+
+
 ?>
