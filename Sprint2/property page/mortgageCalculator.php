@@ -1,47 +1,6 @@
 <?php
 session_start();
-include 'login_functions.php';
 require 'header.php';
-
-$errorMessage = '';
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-
-    // Perform database validation here using PDO
-    try {
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-        // Prepare a SQL statement to select user data by email
-        $stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email");
-        $stmt->bindParam(':email', $email);
-        $stmt->execute();
-
-        $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        if ($user) {
-            // User found, now verify the password
-            if (password_verify($password, $user['password'])) {
-                // Password is correct
-                // You can set session variables and redirect the user to a secure page
-                session_start();
-                $_SESSION['id'] = $user['id'];
-                $_SESSION['logged_in'] = true;
-                header("Location: properties.php");
-                // exit();
-            } else {
-                // Password is incorrect
-                $errorMessage = "Incorrect Password. Please try again.";
-            }
-        } else {
-            // User not found
-            $errorMessage = "User not found";
-        }
-    } catch (PDOException $e) {
-        $errorMessage = "Error: " . $e->getMessage();
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -121,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="image_background">
         <form class="loginForm" method=POST>
-            <h1><b>Login</b></h1>
+            <h1><b>Mortgage Calculator</b></h1>
             <label for="email"><b>Email</b></label><br>
             <input type="text" placeholder="Enter Email" name="email" required><br>
 
@@ -129,7 +88,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="password" placeholder="Enter Password" name="password" required><br>
 
             <button type="submit" class="loginButton">Login</button>
-            <p class="error-message"><?php echo $errorMessage; ?></p>
+            <p class="error-message"><?php echo isset($errorMessage) ? $errorMessage : ''; ?></p>
+        
         </form>
     </div>
 

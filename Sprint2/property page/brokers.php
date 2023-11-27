@@ -13,6 +13,35 @@ require 'loginRestrict.php';
     <link rel="stylesheet" type="text/css" href="brokers_stylescss.css">
     <title>The Magic Realtors</title>
     <style>
+         .broker-card {
+        margin:15px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    @media (min-width: 576px) {
+        .broker-card {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        
+    }
+
+    @media (min-width: 768px) {
+        .broker-card {
+            flex: 0 0 48%;
+            max-width: 48%;
+        }
+    }
+    @media (min-width:1200px) {
+        .broker-card {
+            flex: 0 0 31%;
+            max-width: 31%;
+        }
+    }
+        
+        
         .centered-form {
             display: flex;
             align-items: center;
@@ -56,8 +85,8 @@ require 'loginRestrict.php';
         if (!empty($brokers)) {
             echo '<div class="row">';
             foreach ($brokers as $broker) {
-                echo '<div class="card col-lg-4 col-md-6 col-sm-12">';
-                echo '<div class="card-body">';
+                echo '<div class="card broker-card mx-2 mb-3">';
+                echo '<div class="card-body ">';
                 echo '<h5 class="card-title">' . $broker['broker_name'] . '</h5>';
                 echo '<p><i class="bi bi-geo-alt"></i> ' . $broker['broker_address'] . '</p>';
                 echo '</div>';

@@ -18,14 +18,14 @@ if($property['garage'] == 0){
     $garage = "This property possesses a garage";
 }
 
-    echo '<div>'; 
+    echo '<div class="container-fluid">'; 
     echo '<img src="'.$property['image_url']. '" class="d-block w-100" alt="House Image">';
-    echo '<h1 style="color: dodgerblue;">$' . $property['price'] . '</h1>';
-    echo '<h2>'. $property['house_type'] . '</h2>';
-    echo '<h4>' . $property['address'] .', ' . $property['district'] . '</h4><br>';
+    echo '<h1 style="color: dodgerblue;" class="m-3">$' . $property['price'] . '</h1>';
+    echo '<h2 class="m-3">'. $property['house_type'] . '</h2>';
+    echo '<h4 class="m-3">' . $property['address'] .', ' . $property['district'] . '</h4><br>';
     echo '<div style="background-color: rgb(236, 236, 236); padding: 30px;">';
     echo '<h2>Description</h2>';
-    echo '<p>' . $property['description'] . '</p>';
+    echo '<p class="container">' . $property['description'] . '</p>';
     echo '</div>';
     echo '<div style="background-color: rgb(255, 255, 255); padding: 30px;">';
     echo '<h2>Interior and Exterior Features</h2>';
@@ -119,8 +119,8 @@ if($property['garage'] == 0){
     <br>
     
 
-    <div>
-    <form class="loginForm" method=POST onsubmit="calculator(); return false;">
+    <div class="container" style="margin-left: 50%;">
+    <form class="loginForm" style="text-align: center;" method=POST onsubmit="calculator(); return false;">
             <h1><b>Mortgage Calculator</b></h1>
             <label for="rate"><b>Price</b></label><br>
             <input type="text" placeholder="price" id='price' name="price" value = "<?php echo htmlspecialchars($price); ?>" required><br>
