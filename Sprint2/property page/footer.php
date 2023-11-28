@@ -4,10 +4,10 @@
     <div class="pb-1" style="margin-bottom: -5px;">
     <table style="width: 100%;">
         <tr>
-            <td><a class="nav-link" href="properties.php">Properties</a></td>
-            <td><a class="nav-link" href="brokers.php">Connect with a Broker</a></td>
-             <td><a class="nav-link" href="login.php">Log In</a></td>
-             <td><a class="nav-link" href="create_account.php">Sign Up</a></td>
+            <td><a class="nav-link" href="properties.php" style="color: white;">Properties</a></td>
+            <td><a class="nav-link" href="brokers.php" style="color: white;">Connect with a Broker</a></td>
+             <td><a class="nav-link" href="login.php" style="color: white;">Log In</a></td>
+             <td><a class="nav-link" href="create_account.php" style="color: white;">Sign Up</a></td>
     </table>
 </div>
 <div style="border-top: 1px solid white; margin: 0.5em 0;"></div>

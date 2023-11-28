@@ -1,5 +1,5 @@
 <div class="text-center mt-3">
-    <button id="editBrokersButton" class="btn btn-primary" style="background-color: #000080;">Edit Brokers</button>
+    <button id="editBrokersButton" class="btn btn-primary mb-2" style="background-color: #000080;">Edit Brokers</button>
 </div>
 <div class="container">
 <div class="broker-form" style="display: none;">

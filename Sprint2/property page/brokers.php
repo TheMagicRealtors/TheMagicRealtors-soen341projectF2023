@@ -12,7 +12,9 @@ require 'loginRestrict.php';
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="brokers_stylescss.css">
     <title>The Magic Realtors</title>
+    
     <style>
+      
          .broker-card {
         margin:15px;
         flex: 0 0 100%;
