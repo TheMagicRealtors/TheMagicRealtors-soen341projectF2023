@@ -3,7 +3,7 @@
     require 'header.php';
 
 ?>
-
+<head>
 <style>
 
 .property-card {
@@ -87,6 +87,8 @@
  <link rel="stylesheet" href="css/bootstrap.min.css"> 
   <link rel="stylesheet" href="css/main.min.css">
   <title>The Magic Realtors</title>
+</head>
+<body>
 <div>
         <h1 style="font-size: 72px; color: white;">................................................</h1>
     </div>
@@ -187,7 +189,7 @@
         ?>
     </div>
 </div>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script>
     function toggleFavorite(propertyId) {
     // Check if the user is logged in
@@ -217,7 +219,7 @@
 
 </script>
 
-
+</body>
 <?php
 include 'footer.php';
 ?>
