@@ -119,7 +119,7 @@ if($property['garage'] == 0){
     <br>
     
 
-    <div class="container" style="margin-left: 50%;">
+    <div class="container">
     <form class="loginForm" style="text-align: center;" method=POST onsubmit="calculator(); return false;">
             <h1><b>Mortgage Calculator</b></h1>
             <label for="rate"><b>Price</b></label><br>
