@@ -2,7 +2,6 @@
 -->This project consists of creating a Real Estate Web Application that focuses on the Scrum methodology of the Agile develoment approach. <br /> 
   We live in a world that's evolving, and so do the expectations and the demands of users. So the purpose of our project is to combine digital transformation and real-estate to meet customer needs while   participating in a competitive environment. <br />
 -->In this web application, there are four types of users: <br />
-
     -Homebuyers<br />
     
     -Property renters <br />
