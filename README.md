@@ -19,6 +19,6 @@ Veronique Touma (ID: 40249766): Secretary, back-end and front-end programming
 ## Project Approach and Technology: 
 Programming Languages: HTML5, CSS3, JavaScript, Bootstrap5, mySQL for database, PHP for back-end
 
-Softwares and Applications: VSCode (for writing the code), Instagram (for team communication), XAMPP to host a local server for the website, PHPMyAdmin to connect to MySQL database
+Softwares and Applications: VSCode (for writing the code), Discord (for team communication), XAMPP to host a local server for the website, PHPMyAdmin to connect to MySQL database
 
 
