@@ -13,7 +13,7 @@ This project consists of creating a Real Estate Web Application that focuses on 
     
 &nbsp;&nbsp;&nbsp;-->System administrators 
     
-&nbsp;-All four types of users can create an account, and log in.=
+&nbsp;-All four types of users can create an account, and log in.
   
 &nbsp;-The homebuyers and the property renters are looking for houses to buy or to rent respectively. 
     
@@ -40,19 +40,47 @@ This project consists of creating a Real Estate Web Application that focuses on 
 &nbsp;-Finally system administrators take care of the technicalities of the website. 
     
 
-##### The project is 10 to 12 weeks long, with 4 iterations in total. 
+##### -->The project is 10 to 12 weeks long, with 4 iterations in total. 
 
-## Team Members and Roles:<br />
-Christa Abou Arraje (ID:40226631): Scrum Master, back-end and front-end programming<br />
-Jenisha Sivalingam (ID: 40247937): Secretary, back-end and front-end programming<br />
-Jose Semaan (ID: 40244141): Back-end and front-end programming<br />
-Midhurshaan Nadarajah (ID: 40245631): Back-end and front-end programming<br />
-Oviya Sinnathamby (ID: 40249479): Back-end and front-end programming<br />
-Veronique Touma (ID: 40249766): Secretary, back-end and front-end programming<br /><br />
 
-## Project Approach and Technology: <br />
-Programming Languages: HTML5, CSS3, JavaScript, Bootstrap5, mySQL for database, PHP for back-end<br />
+## Team Members and Roles:
 
-Softwares and Applications: VSCode (for writing the code), Discord (for team communication), XAMPP to host a local server for the website, PHPMyAdmin to connect to MySQL database<br />
+Christa Abou Arraje (ID:40226631): Scrum Master, back-end and front-end programming
+
+Jenisha Sivalingam (ID: 40247937): Secretary, back-end and front-end programming
+
+Jose Semaan (ID: 40244141): Back-end and front-end programming
+
+Midhurshaan Nadarajah (ID: 40245631): Back-end and front-end programming
+
+Oviya Sinnathamby (ID: 40249479): Back-end and front-end programming
+
+Veronique Touma (ID: 40249766): Secretary, back-end and front-end programming
+
+
+## Project Approach and Technology: 
+
+#### Programming Languages: 
+
+&nbsp;&nbsp;-HTML5 for structure (front-end)
+&nbsp;&nbsp;-CSS3 for styling (front-end)
+&nbsp;&nbsp;-JavaScript for dynamic features (front-end)
+&nbsp;&nbsp;-Bootstrap5 for styling using dynamic features (front-end)
+&nbsp;&nbsp;-PHP for connecting to the database (back-end)
+&nbsp;&nbsp;-MySQL for creating and updating the database (back-end)
+
+#### Softwares and Applications: 
+
+&nbsp;&nbsp;-VSCode (IDE)
+
+&nbsp;&nbsp;-Discord (for communication among team members)
+
+&nbsp;&nbsp;-Zoom (for online meetings)
+
+&nbsp;&nbsp;-GitHub (for tracking each team member's work, for project organization, for documentation, for automated testing, ...)
+
+&nbsp;&nbsp;-XAMPP (for hosting our database) 
+
+&nbsp;&nbsp;-PHPMyAdmin (for connecting to our database)
 
 
