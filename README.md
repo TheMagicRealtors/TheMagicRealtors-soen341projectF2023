@@ -1,43 +1,46 @@
 ## Description of the Project: 
--->This project consists of creating a Real Estate Web Application that focuses on the Scrum methodology of the Agile develoment approach. <br /> 
+### Purpose:
+This project consists of creating a Real Estate Web Application that focuses on the Scrum methodology of the Agile develoment approach. <br /> 
   We live in a world that's evolving, and so do the expectations and the demands of users. So the purpose of our project is to combine digital transformation and real-estate to meet customer needs while   participating in a competitive environment. <br />
--->In this web application, there are four types of users: <br />
-    -Homebuyers
+### How the web application works:
+&nbsp;-There are four types of users: 
+
+&nbsp;&nbsp;&nbsp;-->Homebuyers
     
-    -Property renters 
+&nbsp;&nbsp;&nbsp;-->Property renters 
     
-    -Brokers
+&nbsp;&nbsp;&nbsp;-->Brokers
     
-    -System administrators 
+&nbsp;&nbsp;&nbsp;-->System administrators 
     
-  All four types of users can create an account, and log in. <br />
+&nbsp;-All four types of users can create an account, and log in.=
   
-    -The homebuyers and the property renters are looking for houses to buy or to rent respectively. <br />
+&nbsp;-The homebuyers and the property renters are looking for houses to buy or to rent respectively. 
     
-    -They have the option to filter through properties to make the searching process faster. <br />
+&nbsp;-They have the option to filter through properties to make the searching process faster. 
     
-    -They can also save  properties in a "favorites" page so they can check them when they log in another time,  and make a faster decision.<br /> 
+&nbsp;-They can also save  properties in a "favorites" page so they can check them when they log in another time,  and make a faster decision.
     
-    -Each property has a "show more" button that takes the user to a new page having a full description of the corresponding property, including location, amenities, ...). <br />
+&nbsp;-Each property has a "show more" button that takes the user to a new page having a full description of the corresponding property, including location, amenities, ...). 
     
-    -There is as well a mortgage calculator available to homebuyers, so they can see their expected monthly pay of the house of their choice depending on the price of the house, the interest rate, and other factors. <br />
+&nbsp;-There is as well a mortgage calculator available to homebuyers, so they can see their expected monthly pay of the house of their choice depending on the price of the house, the interest rate, and other factors. 
     
-    -Both types of users can book a visit to check out the property of their choice. <br />
+&nbsp;-Both types of users can book a visit to check out the property of their choice. 
     
-    -Homebuyers can also contact a broker of their choice that can help them find the home of their dreams<br />
+&nbsp;-Homebuyers can also contact a broker of their choice that can help them find the home of their dreams
 
-    -The brokers also have the filter option for properties, they can also save favorites on behalf of their clients. <br /> 
+&nbsp;-The brokers also have the filter option for properties, they can also save favorites on behalf of their clients. 
     
-    -They can submit an offer when a homebuyer makes a final decision to buy the house. <br />
+&nbsp;-They can submit an offer when a homebuyer makes a final decision to buy the house. 
     
-    -Brokers have also the possibility to create, update, or delete a property. <br />
+&nbsp;-Brokers have also the possibility to create, update, or delete a property. 
     
-    -They can also modify their account or delete it. <br />
+&nbsp;-They can also modify their account or delete it. 
     
-    -Finally system administrators take care of the technicalities of the website. <br />
+&nbsp;-Finally system administrators take care of the technicalities of the website. 
     
 
--->The project is 10 to 12 weeks long, with 4 iterations in total. <br />
+##### The project is 10 to 12 weeks long, with 4 iterations in total. 
 
 ## Team Members and Roles:<br />
 Christa Abou Arraje (ID:40226631): Scrum Master, back-end and front-end programming<br />
