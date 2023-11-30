@@ -77,7 +77,7 @@ Veronique Touma (ID: 40249766): Secretary, back-end and front-end programming
 
 &nbsp;&nbsp;-Zoom (for online meetings)
 
-&nbsp;&nbsp;-GitHub (for tracking each team member's work, for project organization, for documentation, for automated testing, ...)
+&nbsp;&nbsp;-GitHub (for tracking each team member's work, for project organization, for documentation, and for automated testing)
 
 &nbsp;&nbsp;-XAMPP (for hosting our database) 
 
